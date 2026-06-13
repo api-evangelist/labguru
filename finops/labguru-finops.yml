@@ -1,0 +1,47 @@
+name: Labguru FinOps
+description: Financial operations guidance for organizations using Labguru. Pricing is custom and subscription-based. Cost management focuses on user seat optimization, module selection, and contract negotiation.
+url: https://www.labguru.com/faq-labguru
+considerations:
+  - category: Seat Management
+    description: Labguru pricing scales with the number of active users. Regularly audit user accounts and deactivate unused seats to reduce costs.
+    tips:
+      - Review active user counts quarterly
+      - Remove or deactivate former employees promptly
+      - Consider shared service accounts for read-only access
+
+  - category: Module Selection
+    description: Labguru is modular; costs vary based on which modules are enabled (ELN, LIMS, inventory, automation, analytics).
+    tips:
+      - Only license modules actively used by the team
+      - Start with core ELN and expand incrementally
+      - Evaluate automation/workflow modules against manual labor cost savings
+
+  - category: Contract Terms
+    description: Discounts are available for multi-year commitments and higher volume contracts.
+    tips:
+      - Negotiate annual vs. monthly billing for discounts
+      - Multi-year contracts can yield significant savings
+      - Evaluate enterprise vs. professional tier based on compliance requirements
+
+  - category: Deployment Model
+    description: Cloud-based SaaS is the default; on-premises deployments carry additional infrastructure costs.
+    tips:
+      - Cloud deployment avoids infrastructure overhead
+      - On-premises may be required for GMP/GLP compliance environments
+      - Assess total cost of ownership for on-premises vs. SaaS
+
+  - category: Integration Costs
+    description: Connecting Labguru to ERP, instruments, or third-party systems may require additional professional services.
+    tips:
+      - Use the native REST/GraphQL API to minimize integration costs
+      - Leverage Python (LabguruPython) and R (LabguruR) open-source wrappers
+      - Budget for onboarding and custom integration development
+
+cost_range:
+  low: A few hundred dollars per user per year (basic ELN)
+  high: Several thousand dollars per user per year (advanced enterprise features)
+  source: https://www.labguru.com/faq-labguru
+
+contact:
+  sales: info@biodata.com
+  demo: https://www.labguru.com/book-demo

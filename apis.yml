@@ -1,0 +1,81 @@
+aid: labguru
+name: Labguru
+description: Labguru is an electronic laboratory notebook (ELN) and biotech data management platform that provides a unified REST and GraphQL API for managing experiments, protocols, milestones, inventory, equipment, and research project data. The platform serves biotech, pharma, CRO, food tech, and academic organizations with cloud-based lab operations, LIMS, workflow automation, and data analytics capabilities.
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/labguru/refs/heads/main/apis.yml
+created: '2026-06-13'
+modified: '2026-06-13'
+specificationVersion: '0.19'
+tags:
+  - Electronic Lab Notebook
+  - ELN
+  - LIMS
+  - Laboratory Information Management
+  - Biotech
+  - Life Sciences
+  - Research Data Management
+  - Inventory Management
+  - Experiment Management
+  - REST API
+  - GraphQL
+apis:
+  - aid: labguru:labguru-rest-api
+    name: Labguru REST API
+    description: RESTful API providing create, read, update, and delete access to nearly all data in Labguru including experiments, projects, protocols, milestones, inventory, equipment, measurements, samples, and research data. Supports JSON responses, pagination, filtering, and both v1 and v2 endpoint versions.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://www.labguru.com/developer-tools
+    baseURL: https://my.labguru.com/api/v1
+    tags:
+      - Experiments
+      - Projects
+      - Protocols
+      - Inventory
+      - Equipment
+      - Samples
+      - Measurements
+      - REST
+    properties:
+      - type: Documentation
+        url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+      - type: OpenAPI
+        url: https://my.labguru.com/api-docs/index.html
+      - type: Changelog
+        url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+      - type: Authentication
+        url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+      - type: GitHubRepository
+        url: https://github.com/BioData/labguru-api-examples
+      - type: PythonSDK
+        url: https://github.com/BioData/LabguruPython
+      - type: RSDK
+        url: https://github.com/BioData/LabguruR
+    contact:
+      - FN: Labguru Support
+        email: support@labguru.com
+        url: https://www.labguru.com/support-center
+
+common:
+  - type: Website
+    url: https://www.labguru.com/
+  - type: Documentation
+    url: https://help.labguru.com/en/collections/14641439-development-tools
+  - type: GitHubOrg
+    url: https://github.com/BioData
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/labguru/
+  - type: Blog
+    url: https://www.labguru.com/blog
+  - type: Pricing
+    url: https://www.labguru.com/faq-labguru
+  - type: X
+    url: https://twitter.com/labguru
+  - type: Plans
+    url: plans/labguru-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/labguru-rate-limits.yml
+  - type: FinOps
+    url: finops/labguru-finops.yml
+
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

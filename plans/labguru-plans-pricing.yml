@@ -1,0 +1,43 @@
+name: Labguru Plans and Pricing
+description: Labguru offers custom pricing for their ELN, LIMS, inventory, and automation platform. Pricing is not publicly listed and is quote-based depending on the number of users, modules, deployment type, and support level.
+url: https://www.labguru.com/faq-labguru
+plans:
+  - name: Academic / Startup
+    description: Entry-level plan for small research teams and academic labs with core ELN and project management features.
+    pricing: Contact for pricing
+    details:
+      - Electronic lab notebook (ELN)
+      - Project and experiment management
+      - Protocols and milestones
+      - Cloud-based deployment
+      - Basic support
+
+  - name: Professional
+    description: Full-featured plan for growing biotech and pharma organizations requiring inventory, LIMS, and API access.
+    pricing: Contact for pricing
+    details:
+      - All Academic features
+      - LIMS capabilities
+      - Inventory management
+      - REST API access
+      - Integrations and automation
+      - Standard support
+
+  - name: Enterprise
+    description: Comprehensive plan for large organizations and CROs requiring advanced customization, compliance, and dedicated support.
+    pricing: Contact for pricing
+    details:
+      - All Professional features
+      - GLP/GMP compliance tools
+      - GraphQL API access
+      - Workflow automation editor
+      - Custom integrations (ERP, instruments)
+      - Dedicated onboarding and support
+      - SSO / LDAP authentication
+      - On-premises or private cloud option
+
+notes:
+  - Pricing is custom and quote-based; contact info@biodata.com or book a demo at https://www.labguru.com/book-demo
+  - A free trial is available
+  - Discounts available for multi-year contracts and higher user volumes
+  - Academic institutions may receive special pricing

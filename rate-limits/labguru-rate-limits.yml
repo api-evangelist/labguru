@@ -1,0 +1,19 @@
+name: Labguru API Rate Limits
+description: Labguru does not publicly document specific rate limits or API quotas. The REST API uses pagination with a default page size of 200 items per request. Users are advised to contact Labguru support for plan-specific rate limit details.
+url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+limits:
+  - type: Pagination
+    description: API responses are paginated; default page size is 200 items per page. Configurable via query parameters.
+    default_page_size: 200
+
+  - type: Authentication Tokens
+    description: Personal tokens are used for SSO/LDAP accounts. Standard accounts use username and password with workspace/account number. Tokens should be managed securely per user.
+
+  - type: Request Scope
+    description: API requests executed on the API documentation test page are real requests performed on the authenticated workspace.
+
+notes:
+  - No publicly documented rate limits (requests per second/minute/day) found as of June 2026
+  - Contact support@labguru.com or the dedicated Slack channel for rate limit details
+  - The API supports both REST (v1, v2) and GraphQL endpoints
+  - V2 endpoints are progressively replacing V1 endpoints (e.g., GET /api/v2/experiments is stable; V1 deprecated)
