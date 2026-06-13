@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/LinkBaseRequest.json",
+  "title": "LinkBaseRequest",
+  "type": "object",
+  "required": [
+    "token"
+  ],
+  "properties": {
+    "token": {
+      "type": "string",
+      "example": "YOUR TOKEN IS HERE"
+    },
+    "item": {
+      "type": "object",
+      "properties": {
+        "source_id": {
+          "type": "integer",
+          "description": "The ID of the source item"
+        },
+        "source_type": {
+          "type": "string",
+          "description": "Specifies the class name of the source item, such as Biocollections::Plasmid"
+        },
+        "target_id": {
+          "type": "integer",
+          "description": "The ID of the target item"
+        },
+        "target_type": {
+          "type": "string",
+          "description": "Specifies the class name of the target item, such as Biocollections::Antibody"
+        },
+        "source_uuid": {
+          "type": "string",
+          "description": "The UUID of the source item"
+        },
+        "target_uuid": {
+          "type": "string",
+          "description": "The UUID of the target item"
+        }
+      }
+    }
+  }
+}

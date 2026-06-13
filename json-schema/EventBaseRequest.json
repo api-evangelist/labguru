@@ -1,0 +1,70 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/EventBaseRequest.json",
+  "title": "EventBaseRequest",
+  "type": "object",
+  "required": [
+    "token"
+  ],
+  "properties": {
+    "token": {
+      "type": "string",
+      "example": "YOUR TOKEN IS HERE"
+    },
+    "item": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "event title"
+        },
+        "start_date": {
+          "type": "string",
+          "format": "date",
+          "description": "the event start date"
+        },
+        "end_date": {
+          "type": "string",
+          "format": "date",
+          "description": "the event end date"
+        },
+        "description": {
+          "type": "string",
+          "description": " text description for this event"
+        },
+        "notify_members": {
+          "type": "string",
+          "description": "who should be notified regarding the event: notify only me =[1], notify all participants = [-1], none =[0]",
+          "example": "[0]"
+        },
+        "notify_at": {
+          "type": "string",
+          "format": "date",
+          "description": "when to notify about the event"
+        },
+        "is_fullday_event": {
+          "type": "boolean",
+          "description": "true/false"
+        },
+        "repeats": {
+          "type": "integer",
+          "description": "1/0"
+        },
+        "repeat_frame": {
+          "type": "string",
+          "description": "the time frame which the event will be repeated at - Never, days, weeks, months",
+          "example": "Never"
+        },
+        "eventable_id": {
+          "type": "integer",
+          "description": "the equipment id which the event is related to"
+        },
+        "eventable_type": {
+          "type": "string",
+          "description": "the item class name - System::Instrument",
+          "example": "System::Instrument"
+        }
+      }
+    }
+  }
+}

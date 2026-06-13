@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/createRodentSpecimen.json",
+  "title": "createRodentSpecimen",
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/RodentSpecimenBaseRequest"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "item": {
+          "type": "object",
+          "required": [
+            "name",
+            "status"
+          ]
+        }
+      }
+    }
+  ]
+}

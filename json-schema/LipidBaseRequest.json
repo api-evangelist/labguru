@@ -1,0 +1,76 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/LipidBaseRequest.json",
+  "title": "LipidBaseRequest",
+  "type": "object",
+  "required": [
+    "token"
+  ],
+  "properties": {
+    "token": {
+      "type": "string",
+      "example": "YOUR TOKEN IS HERE"
+    },
+    "item": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the lipid"
+        },
+        "owner_id": {
+          "type": "integer",
+          "description": "ID of the owner (default: your member id)"
+        },
+        "alternative_name": {
+          "type": "string",
+          "description": "Any alternative name by which the lipid may be known"
+        },
+        "molecular_formula": {
+          "type": "string",
+          "description": "The molecular formula of the lipid"
+        },
+        "molecular_weight": {
+          "type": "string",
+          "description": "Molecular weight of the lipid"
+        },
+        "cas_number": {
+          "type": "string",
+          "description": "The Chemical Abstracts Service number"
+        },
+        "stock_solution_prep": {
+          "type": "string",
+          "description": "Media/solution"
+        },
+        "solubility": {
+          "type": "string",
+          "description": "Solubility information"
+        },
+        "conditions_for_use": {
+          "type": "string",
+          "description": "Recommended conditions under which the lipid should be used"
+        },
+        "conditions_for_storage": {
+          "type": "string",
+          "description": "Guidelines for proper storage of the lipid"
+        },
+        "safety_information": {
+          "type": "string",
+          "description": "Safety guidelines and hazard information related to the lipid"
+        },
+        "impurities": {
+          "type": "string",
+          "description": "Details of known impurities found in the lipid sample"
+        },
+        "source": {
+          "type": "string",
+          "description": "The origin of the lipid"
+        },
+        "description": {
+          "type": "string",
+          "description": "Detailed description of the lipid"
+        }
+      }
+    }
+  }
+}

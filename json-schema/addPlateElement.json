@@ -1,0 +1,59 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/addPlateElement.json",
+  "title": "Add plate element",
+  "type": "object",
+  "required": [
+    "token"
+  ],
+  "properties": {
+    "token": {
+      "type": "string",
+      "example": "YOUR TOKEN IS HERE"
+    },
+    "item": {
+      "type": "object",
+      "required": [
+        "container_id",
+        "container_type",
+        "element_type",
+        "data",
+        "rows",
+        "cols"
+      ],
+      "description": "Valid plate dimensions are:<br>\u2022 3x2 (6 wells)<br>\u2022 4x3 (12 wells)<br>\u2022 6x4 (24 wells)<br>\u2022 8x6 (48 wells)<br>\u2022 12x6 (72 wells)<br>\u2022 12x8 (96 wells)<br>\u2022 24x16 (384 wells)<br>",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Specifies the name of the element. If not provided, the element will be assigned a default name"
+        },
+        "container_id": {
+          "type": "integer",
+          "description": "The ID of the section to which the element will be added"
+        },
+        "container_type": {
+          "type": "string",
+          "description": "The type of container in which the plate element will be placed",
+          "example": "ExperimentProcedure"
+        },
+        "element_type": {
+          "type": "string",
+          "description": "The type of element to be added",
+          "example": "plate"
+        },
+        "cols": {
+          "type": "integer",
+          "description": "the number of columns in the plate layout"
+        },
+        "rows": {
+          "type": "integer",
+          "description": "The number of rows in the plate layout"
+        },
+        "data": {
+          "type": "string",
+          "nullable": true
+        }
+      }
+    }
+  }
+}

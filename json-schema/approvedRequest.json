@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/approvedRequest.json",
+  "title": "approvedRequest",
+  "type": "object",
+  "required": [
+    "token"
+  ],
+  "properties": {
+    "token": {
+      "type": "string",
+      "example": "YOUR TOKEN IS HERE"
+    },
+    "item": {
+      "type": "object",
+      "properties": {
+        "team_id": {
+          "type": "integer",
+          "description": "The performing team ID"
+        },
+        "due_date": {
+          "type": "string",
+          "format": "date",
+          "description": "Date in the following format - 'YYYY-MM-DD'",
+          "example": "2024-03-11"
+        },
+        "priority": {
+          "type": "string",
+          "description": "Specifies the priority level of the request. By default - Low",
+          "enum": [
+            "Low",
+            "Medium",
+            "High",
+            "Urgent"
+          ],
+          "example": "Medium"
+        }
+      }
+    }
+  }
+}

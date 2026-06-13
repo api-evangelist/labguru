@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/createStorage.json",
+  "title": "createStorage",
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/StorageBaseRequest"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "system_storage_storage": {
+          "type": "object",
+          "required": [
+            "name",
+            "storage_type_id"
+          ]
+        }
+      }
+    }
+  ]
+}

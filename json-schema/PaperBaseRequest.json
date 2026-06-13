@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/PaperBaseRequest.json",
+  "title": "PaperBaseRequest",
+  "type": "object",
+  "required": [
+    "token"
+  ],
+  "properties": {
+    "token": {
+      "type": "string",
+      "example": "YOUR TOKEN IS HERE"
+    },
+    "item": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "the papers title "
+        },
+        "journal": {
+          "type": "string",
+          "description": "the time period in numbers"
+        },
+        "authors": {
+          "type": "string",
+          "description": ""
+        },
+        "publication_date": {
+          "type": "string",
+          "format": "date",
+          "description": "in the following format yyyy-mm-dd "
+        },
+        "volume": {
+          "type": "string",
+          "description": "volume"
+        },
+        "pages": {
+          "type": "string",
+          "description": "pages"
+        },
+        "url": {
+          "type": "string",
+          "description": "www.link.com"
+        },
+        "doi": {
+          "type": "string",
+          "description": "digital object identifier",
+          "example": "10.1002/aur21"
+        },
+        "review": {
+          "type": "string",
+          "description": "Abstract"
+        }
+      }
+    }
+  }
+}

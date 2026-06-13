@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/updateStockAmountInSampleElement.json",
+  "title": "updateStockAmountInSampleElement",
+  "type": "object",
+  "required": [
+    "token"
+  ],
+  "properties": {
+    "token": {
+      "type": "string",
+      "example": "YOUR TOKEN IS HERE"
+    },
+    "unit_type": {
+      "type": "string",
+      "description": "weight/volume"
+    },
+    "element_id": {
+      "type": "integer",
+      "description": "the samples element id"
+    },
+    "amount_used": {
+      "type": "string",
+      "description": "amount_used",
+      "example": 15
+    },
+    "unit_type_name": {
+      "type": "string",
+      "description": "unit_type_name",
+      "example": "mg"
+    },
+    "subtract": {
+      "type": "string",
+      "description": "true",
+      "example": "true"
+    },
+    "sample_id": {
+      "type": "integer",
+      "description": "the sample id"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/createDataset.json",
+  "title": "createDataset",
+  "type": "object",
+  "required": [
+    "token"
+  ],
+  "properties": {
+    "token": {
+      "type": "string",
+      "example": "YOUR TOKEN IS HERE"
+    },
+    "item": {
+      "type": "object",
+      "required": [
+        "name",
+        "data_attachment_id"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "dataset name"
+        },
+        "data_attachment_id": {
+          "type": "integer",
+          "description": "dataset attachment id"
+        },
+        "sdf_attachment_id": {
+          "type": "integer",
+          "description": "SDF attachment id"
+        },
+        "description": {
+          "type": "string",
+          "description": "dataset description"
+        }
+      }
+    }
+  }
+}

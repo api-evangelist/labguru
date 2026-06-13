@@ -1,0 +1,2575 @@
+{
+  "title": "Labguru API Vocabulary",
+  "description": "Domain vocabulary extracted from the Labguru REST API specification",
+  "source": "https://my.labguru.com/api-docs/v1/swagger.yaml",
+  "terms": [
+    {
+      "term": "Antibodies",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Attachments",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Authentication",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Bacteria",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Boxes",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Cell lines",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Comments",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Companies",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Compounds",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Consumables",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Datasets",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Documents",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Elements",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Equipment",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Events",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Experiments",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Filters",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Flags",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Flies",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Folders",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Fungi",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Generic Items",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Genes",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Links",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Lipids",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Maintenance event",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Maintenance template",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Maintenance types",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Maintenances",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Manifest",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Measurements",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Members",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Notes",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Papers",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Plants",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Plasmids",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Plates",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Primers",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Projects",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Proteins",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Protocols",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Reports",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Request templates",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Requests",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Rodent Specimens",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Rodent Strains",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Rodent cages",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "SOPs",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Sample Pooling",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Search",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Sections",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Seeds",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Sequences",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Shopping list",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Stocks",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Storages",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Submodules",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Tags",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Teams",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Tissue",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Units",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Vectors",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Viruses",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Visualizations",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Webhooks",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Workflows",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Worms",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "Yeasts",
+      "type": "resource",
+      "source": "API tag"
+    },
+    {
+      "term": "createSession",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createAttachment",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updateAttachment",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "WormBaseRequest",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createWorm",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updateWorm",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "AntibodyBaseRequest",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createAntibody",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updateAntibody",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "ExperimentBaseRequest",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "addExperiment",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updateExperiment",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "PlasmidBaseRequest",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createPlasmid",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updatePlasmid",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "SOPBaseRequest",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createSOP",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updateSOP",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createComment",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "LinkBaseRequest",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createLink",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updateLink",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "CompoundBaseRequest",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createCompound",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updateCompound",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "TaskBaseRequest",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createTask",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updateTask",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "RodentCageBaseRequest",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createRodentCage",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updateRodentCage",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "GeneBaseRequest",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createGene",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updateGene",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "VirusBaseRequest",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createVirus",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updateVirus",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "LipidBaseRequest",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createLipid",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updateLipid",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "YeastBaseRequest",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createYeast",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updateYeast",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "ProjectBaseRequest",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createProject",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updateProject",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "BacteriumBaseRequest",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createBacterium",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updateBacterium",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "PrimerBaseRequest",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createPrimer",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updatePrimer",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "SeedBaseRequest",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createSeed",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updateSeed",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "CellLineBaseRequest",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createCellLine",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updateCellLine",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "ProteinBaseRequest",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createProtein",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updateProtein",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "PlantBaseRequest",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createPlant",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updatePlant",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "FlyBaseRequest",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createFly",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updateFly",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "SequenceBaseRequest",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createSequence",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updateSequence",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "RodentSpecimenBaseRequest",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createRodentSpecimen",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updateRodentSpecimen",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createMaintenanceType",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updateMaintenanceType",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "FungusBaseRequest",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createFungus",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updateFungus",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "TissueBaseRequest",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createTissue",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updateTissue",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "RodentStrainBaseRequest",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createRodentStrain",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updateRodentStrain",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createProtocol",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updateProtocol",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createMaintenance",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updateMaintenance",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "PaperBaseRequest",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createPaper",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updatePaper",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "DocumentBaseRequest",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createDocument",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updateDocument",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "ReportBaseRequest",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createReport",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updateReport",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "addAnExperimentSectionToReport",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "addCoverToReport",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "NoteBaseRequest",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createNote",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updateNote",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "CompanyBaseRequest",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createCompany",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updateCompany",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "EquipmentBaseRequest",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createEquipment",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updateEquipment",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "MaintenanceTemplateBaseRequest",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createMaintenanceTemplate",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updateMaintenanceTemplate",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "MaintenanceEventBaseRequest",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createMaintenanceEvent",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updateMaintenanceEvent",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createSection",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updateSection",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "moveSection",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createFolder",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updateFolder",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "StorageBaseRequest",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createStorage",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updateStorage",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "BoxBaseRequest",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createBox",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updateBox",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createTag",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "deleteTag",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "EventBaseRequest",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createEvent",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updateEvent",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createWebhook",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updateWebhook",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createDataset",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "assignItemToDataset",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createVisualization",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createVector",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updateVector",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "GenericItemBaseRequest",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createGenericItem",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updateGenericItem",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "addItem",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "addCustomItem",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updateOrder",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "MaterialBaseRequest",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createMaterial",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updateMaterial",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "StockBaseRequest",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createStock",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updateStock",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updateStockAmountInSampleElement",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createUnit",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "deleteUnit",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createRequest",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updateRequest",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "submitRequest",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "approvedRequest",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "acceptRequest",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "selectPerformer",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "startRequest",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createRequestTemplate",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updateRequestTemplate",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "indexFiltering",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "addVisualization",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "addElement",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updateTextElement",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updateFormElement",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "addPlateElement",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createFixedSamplePoolingEvent",
+      "type": "schema",
+      "description": "draw a fixed amount from all stocks.",
+      "source": "API schema"
+    },
+    {
+      "term": "createCustomSamplePoolingEvent",
+      "type": "schema",
+      "description": "draw a custom amount from each stock.",
+      "source": "API schema"
+    },
+    {
+      "term": "createConsumeSamplePoolingEvent",
+      "type": "schema",
+      "description": "draw the entire amount and consume.",
+      "source": "API schema"
+    },
+    {
+      "term": "FlagBaseRequest",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "createFlag",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "updateFlag",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "InvalidRequestError",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "UnprocessableEntity",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "InternalServerError",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "Unauthorized",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "OK",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "NotFound",
+      "type": "schema",
+      "source": "API schema"
+    },
+    {
+      "term": "Accept a request\u00a0",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Add a box",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Add a company",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Add a folder",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Add a generic item",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Add a note",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Add a paper",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Add a report",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Add a section",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Add a storage",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Add an equipment",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Add an event",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Add an experiment",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Add consumable",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Add cover to report",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Add element",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Add flag to an experiment",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Add item",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Add maintenance to equipment",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Add measurements",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Add parent to an item",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Add section to report",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Add stock",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Add tag",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Add unit",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Approve a request\u00a0",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Approve order",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Cancel order",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Complete a request\u00a0",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Create a Flag",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Create a Fly",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Create a bacterium",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Create a cell line",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Create a fungus",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Create a gene",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Create a lipid",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Create a new webhook subscription",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Create a plant",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Create a plasmid",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Create a project",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Create a protein",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Create a request",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Create a request template",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Create a tissue",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Create a token",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Create a virus",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Create a worm",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Create a yeast",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Create an antibody",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Creates a Maintenance event",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Creates a Maintenance template",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Creates a Maintenance type",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Creates a SOP",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Creates a comment",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Creates a compound",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Creates a dataset",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Creates a document",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Creates a link",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Creates a pool event",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Creates a primer",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Creates a protocol",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Creates a rodent cage",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Creates a rodent specimen",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Creates a rodent strain",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Creates a seed",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Creates a sequence",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Creates a vectors",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Delete event",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Delete storage",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Delete tag",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Delete unit",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Delete visualization",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Duplicate a master plate",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Filter Biocollections items",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Filter Custom collections items",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Filter knowledgbase items",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Find a plate by name",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get SOP by id",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get a cell line by id",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get a plant by ID",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get a protein by id",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get an antibody by ID",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get an attachment by id",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get bacterium by id",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get box by id",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get comment by id",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get company by id",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get compound by id",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get consumable by id",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get dataset by id",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get document by id",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get element by id",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get equipment by id",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get event by id",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get experiment by id",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get flag by id",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get fly by id",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get folder by id",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get fungus by id",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get gene by id",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get generic item by id",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get link by id",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get link by uuid",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get lipid by ID",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get maintenance event by id",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get maintenance template by id",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get maintenance type by id",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get maintenances by id",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get note by id",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get order by id",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get paper by id",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get parents of an inventory item",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get plasmid by ID",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get plate by id",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get primer by ID",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get project by id",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get protocol by id",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get report by id",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get request by id",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get rodent cage by id",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get rodent specimen by id",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get rodent strain by id",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get search results",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get section by id",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get seed by id",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get sequence by id",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get stock by barcode/id",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get stock by id",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get storage by id",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get team by id",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get the derived collections of a collection",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get the derived collections of a generic collection",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get the derived items of a collection item",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get the derived items of a generic collection item",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get tissue by id",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get unit by id",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get vector by id",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get virus by id",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get webhook by id",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get workflow by id",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get worm by id",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Get yeast by id",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Link an attachment to an attachment element",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all Rodent Specimens in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all SOPs in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all antibodies in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all bacteria in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all boxes in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all cell lines in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all comments in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all companies in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all compounds in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all consumables in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all datasets in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all documents in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all elements of an experiment ",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all equipment in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all event in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all experiments in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all flags in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all flies in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all folders in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all fungi in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all generic items in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all genes in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all lipids in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all maintenance events in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all maintenance templates in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all maintenance types in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all maintenances in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all members in the account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all notes in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all orders in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all papers in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all plants in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all plasmids in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all plates in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all primers in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all projects in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all proteins in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all protocols in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all reports in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all request templates in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all requests in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all rodent cages in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all rodent strains in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all seeds in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all sequences in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all stocks in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all storages in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all teams in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all tissues in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all units in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all vectors in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all viruses in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all webhooks available",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all webhooks in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all workflows in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all worms in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List all yeasts in your account",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "List the objects that have changed today",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Marks stock as consumed",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Marks stock as output",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Rearrange elements",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Reject a request\u00a0",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Select performer",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Sort sections",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Start a request\u00a0",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Submit a request\u00a0",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Submit order",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Unmarks stock as output",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Update SOP",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Update a cell line ",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Update a flag",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Update a fly",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Update a link",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Update a plasmid",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Update a project",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Update a request\u00a0",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Update a seed",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Update a sequence ",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Update a tissue",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Update a virus",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Update a worm",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Update a yeast",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Update an antibody",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Update an experiment",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Update bacterium",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Update box attributes",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Update company attributes",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Update compound attributes",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Update document attributes",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Update element",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Update equipment attributes",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Update event attributes",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Update folder attributes",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Update fungus",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Update gene",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Update generic item attributes",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Update item with a new parent",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Update lipid",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Update maintenance event",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Update maintenance of equipment",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Update maintenance template",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Update maintenance type",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Update material attributes",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Update notes attributes",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Update order",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Update paper attributes",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Update plant",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Update primer",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Update protein attributes",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Update protocol",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Update reports attributes",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Update request\u00a0template",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Update rodent cage attributes",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Update rodent specimen attributes",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Update rodent strain attributes",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Update section",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Update stock attributes",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Update stock weight/volume for stock in sample element",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Update storage attributes",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Update vector attributes",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Update webhook attributes",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "Upload file attachment",
+      "type": "operation",
+      "source": "API operation summary"
+    },
+    {
+      "term": "add visualization",
+      "type": "operation",
+      "source": "API operation summary"
+    }
+  ]
+}

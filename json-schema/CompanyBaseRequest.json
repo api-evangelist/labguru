@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/CompanyBaseRequest.json",
+  "title": "CompanyBaseRequest",
+  "type": "object",
+  "required": [
+    "token"
+  ],
+  "properties": {
+    "token": {
+      "type": "string",
+      "example": "YOUR TOKEN IS HERE"
+    },
+    "item": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "the company name"
+        },
+        "address": {
+          "type": "string",
+          "description": "address of the company"
+        },
+        "web": {
+          "type": "string",
+          "description": "link to the company web page "
+        },
+        "contact": {
+          "type": "string",
+          "description": "contacts "
+        },
+        "email": {
+          "type": "string",
+          "description": "email "
+        },
+        "fax": {
+          "type": "string",
+          "description": "fax number "
+        },
+        "description": {
+          "type": "string",
+          "description": "general description "
+        }
+      }
+    }
+  }
+}

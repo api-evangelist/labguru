@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/deleteUnit.json",
+  "title": "deleteUnit",
+  "type": "object",
+  "required": [
+    "token",
+    "unit_type"
+  ],
+  "properties": {
+    "token": {
+      "type": "string",
+      "example": "YOUR TOKEN IS HERE"
+    },
+    "unit_type": {
+      "type": "string",
+      "description": "weight/volume/concentration",
+      "example": "weight"
+    }
+  }
+}

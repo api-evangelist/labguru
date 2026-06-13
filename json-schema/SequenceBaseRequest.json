@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/SequenceBaseRequest.json",
+  "title": "SequenceBaseRequest",
+  "type": "object",
+  "required": [
+    "token"
+  ],
+  "properties": {
+    "token": {
+      "type": "string",
+      "example": "YOUR TOKEN IS HERE"
+    },
+    "item": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "The name of the sequence"
+        },
+        "owner_id": {
+          "type": "integer",
+          "description": "id of the owner - by default it's your member id"
+        },
+        "seq": {
+          "type": "string",
+          "description": "The actual sequence data in characters"
+        },
+        "kind": {
+          "type": "integer",
+          "description": "sequence type: DNA = 1, CDNA = 2, RNA = 3, PROBE = 4, PROTEIN = 5",
+          "example": 2
+        },
+        "accsesion": {
+          "type": "string",
+          "description": "The unique accession number assigned to the sequence"
+        },
+        "organism": {
+          "type": "string",
+          "description": "The organism from which the sequence is derived"
+        },
+        "description": {
+          "type": "string",
+          "description": "Description of the sequence"
+        }
+      }
+    }
+  }
+}

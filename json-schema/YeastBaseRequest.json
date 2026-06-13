@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/YeastBaseRequest.json",
+  "title": "YeastBaseRequest",
+  "type": "object",
+  "required": [
+    "token"
+  ],
+  "properties": {
+    "token": {
+      "type": "string",
+      "example": "YOUR TOKEN IS HERE"
+    },
+    "item": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the yeast"
+        },
+        "description": {
+          "type": "string",
+          "description": "Description of the yeast"
+        },
+        "reproduction": {
+          "type": "string",
+          "description": "Details of the mode of reproduction for the yeast"
+        },
+        "genetic_background": {
+          "type": "string",
+          "description": "yeast's genetic lineage or background"
+        },
+        "transgenic_features": {
+          "type": "string",
+          "description": "Transgenic Features"
+        },
+        "phenotype": {
+          "type": "string",
+          "description": "Observable characteristics of the yeast"
+        },
+        "source": {
+          "type": "string",
+          "description": "Origin of the yeast strain"
+        },
+        "owner_id": {
+          "type": "integer",
+          "description": "id of the owner - if omitted, will default to your member id"
+        }
+      }
+    }
+  }
+}

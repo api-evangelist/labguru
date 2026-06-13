@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/createMaintenanceEvent.json",
+  "title": "createMaintenanceEvent",
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/MaintenanceEventBaseRequest"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "item": {
+          "type": "object",
+          "required": [
+            "item_id",
+            "item_type",
+            "maintenance_id",
+            "data",
+            "performed_by",
+            "performed_at"
+          ]
+        }
+      }
+    }
+  ]
+}

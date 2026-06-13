@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/ExperimentBaseRequest.json",
+  "title": "ExperimentBaseRequest",
+  "type": "object",
+  "required": [
+    "token"
+  ],
+  "properties": {
+    "token": {
+      "type": "string",
+      "example": "YOUR TOKEN IS HERE"
+    },
+    "item": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "The experiment title"
+        },
+        "project_id": {
+          "type": "integer",
+          "description": "The project id"
+        },
+        "milestone_id": {
+          "type": "integer",
+          "description": "You can also provide a milestone_name(string) instead of milestone_id(integer)"
+        },
+        "protocol_id": {
+          "type": "integer",
+          "description": "Start experiment from protocol by providing the protocol id "
+        }
+      }
+    }
+  }
+}

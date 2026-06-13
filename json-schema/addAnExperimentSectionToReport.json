@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/addAnExperimentSectionToReport.json",
+  "title": "addAnExperimentSectionToReport",
+  "type": "object",
+  "required": [
+    "token"
+  ],
+  "properties": {
+    "token": {
+      "type": "string",
+      "example": "YOUR TOKEN IS HERE"
+    },
+    "item": {
+      "type": "object",
+      "required": [
+        "report_id",
+        "section_id"
+      ],
+      "properties": {
+        "report_id": {
+          "type": "integer",
+          "description": "the report id"
+        },
+        "section_id": {
+          "type": "string",
+          "description": "the experiment procedure id to copy",
+          "example": "32"
+        }
+      }
+    }
+  }
+}

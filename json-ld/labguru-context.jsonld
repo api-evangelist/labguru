@@ -1,0 +1,92 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "labguru": "https://www.labguru.com/ontology/",
+    "api": "https://my.labguru.com/api/v1/",
+    "Experiment": {
+      "@id": "labguru:Experiment",
+      "@type": "@id"
+    },
+    "Project": {
+      "@id": "labguru:Project",
+      "@type": "@id"
+    },
+    "Protocol": {
+      "@id": "labguru:Protocol",
+      "@type": "@id"
+    },
+    "Milestone": {
+      "@id": "labguru:Milestone",
+      "@type": "@id"
+    },
+    "Sample": {
+      "@id": "labguru:Sample",
+      "@type": "@id"
+    },
+    "Equipment": {
+      "@id": "labguru:Equipment",
+      "@type": "@id"
+    },
+    "Inventory": {
+      "@id": "labguru:Inventory",
+      "@type": "@id"
+    },
+    "Compound": {
+      "@id": "labguru:Compound",
+      "@type": "@id"
+    },
+    "Plasmid": {
+      "@id": "labguru:Plasmid",
+      "@type": "@id"
+    },
+    "Antibody": {
+      "@id": "labguru:Antibody",
+      "@type": "@id"
+    },
+    "CellLine": {
+      "@id": "labguru:CellLine",
+      "@type": "@id"
+    },
+    "Box": {
+      "@id": "labguru:Box",
+      "@type": "@id"
+    },
+    "Location": {
+      "@id": "schema:Place",
+      "@type": "@id"
+    },
+    "Measurement": {
+      "@id": "labguru:Measurement",
+      "@type": "@id"
+    },
+    "Dataset": {
+      "@id": "schema:Dataset",
+      "@type": "@id"
+    },
+    "Comment": {
+      "@id": "schema:Comment",
+      "@type": "@id"
+    },
+    "Attachment": {
+      "@id": "schema:MediaObject",
+      "@type": "@id"
+    },
+    "User": {
+      "@id": "schema:Person",
+      "@type": "@id"
+    },
+    "Organization": {
+      "@id": "schema:Organization",
+      "@type": "@id"
+    },
+    "id": "@id",
+    "name": "schema:name",
+    "description": "schema:description",
+    "created_at": "schema:dateCreated",
+    "updated_at": "schema:dateModified",
+    "title": "schema:name",
+    "notes": "schema:description",
+    "token": "labguru:token",
+    "account_id": "labguru:accountId"
+  }
+}

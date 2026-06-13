@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/addCoverToReport.json",
+  "title": "addCoverToReport",
+  "type": "object",
+  "required": [
+    "token"
+  ],
+  "properties": {
+    "token": {
+      "type": "string",
+      "example": "YOUR TOKEN IS HERE"
+    },
+    "item": {
+      "type": "object",
+      "required": [
+        "report_id",
+        "data"
+      ],
+      "properties": {
+        "report_id": {
+          "type": "integer",
+          "description": "the report id"
+        },
+        "data": {
+          "type": "string",
+          "description": "cover page data in HTML format",
+          "example": "<h1>Cover Page Heading</h1>"
+        }
+      }
+    }
+  }
+}

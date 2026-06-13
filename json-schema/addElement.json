@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/addElement.json",
+  "title": "Add element",
+  "type": "object",
+  "required": [
+    "token"
+  ],
+  "properties": {
+    "token": {
+      "type": "string",
+      "example": "YOUR TOKEN IS HERE"
+    },
+    "item": {
+      "type": "object",
+      "required": [
+        "container_id",
+        "container_type",
+        "element_type",
+        "data"
+      ],
+      "description": "Valid element types are:<br>\u2022 samples<br>\u2022 equipment<br>\u2022 code<br>\u2022 compound<br>\u2022 reaction<br>\u2022 text<br>\u2022 steps<br>\u2022 excel<br>\u2022 plate<br>",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Specifies the name of the element. If not provided, the element will be assigned a default name"
+        },
+        "container_id": {
+          "type": "integer",
+          "description": "The ID of the section to which the element will be added"
+        },
+        "container_type": {
+          "type": "string",
+          "description": "The type of container in which the element will be placed",
+          "example": "ExperimentProcedure"
+        },
+        "element_type": {
+          "type": "string",
+          "description": "The type of element to be added"
+        },
+        "data": {
+          "type": "string",
+          "nullable": true
+        }
+      }
+    }
+  }
+}

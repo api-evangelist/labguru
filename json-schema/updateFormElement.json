@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/updateFormElement.json",
+  "title": "Update form element",
+  "type": "object",
+  "required": [
+    "token"
+  ],
+  "properties": {
+    "token": {
+      "type": "string",
+      "example": "YOUR TOKEN IS HERE"
+    },
+    "form_json": {
+      "type": "string",
+      "description": "A JSON string containing key-value pairs that specify updates to the form fields.\n                  Each key corresponds to a form field name and the value specifies the new content for that field.",
+      "example": {
+        "Field Name": "Field Content"
+      }
+    }
+  }
+}

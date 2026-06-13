@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/createNote.json",
+  "title": "createNote",
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/NoteBaseRequest"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "item": {
+          "type": "object",
+          "required": [
+            "title",
+            "project_id"
+          ]
+        }
+      }
+    }
+  ]
+}

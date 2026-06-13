@@ -1,0 +1,76 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/AntibodyBaseRequest.json",
+  "title": "AntibodyBaseRequest",
+  "type": "object",
+  "required": [
+    "token"
+  ],
+  "properties": {
+    "token": {
+      "type": "string",
+      "example": "YOUR TOKEN IS HERE"
+    },
+    "item": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "The name of the antibody"
+        },
+        "owner_id": {
+          "type": "integer",
+          "description": "The ID of the owner - by default it's your member id"
+        },
+        "alternative_name": {
+          "type": "string",
+          "description": "An additional name for the antibody"
+        },
+        "antigene": {
+          "type": "string",
+          "description": "Antigen / immunogen"
+        },
+        "tags_fluorophores": {
+          "type": "string",
+          "description": "Tags / fluorophores"
+        },
+        "clone_field": {
+          "type": "string",
+          "description": "The clone from which the antibody was derived."
+        },
+        "isotype": {
+          "type": "string",
+          "description": "The class or type of the antibody (e.g., IgG, IgM)."
+        },
+        "preparation_date": {
+          "type": "string",
+          "format": "date",
+          "description": "The date on which the antibody was prepared, formatted as YYYY-MM-DD.",
+          "example": "yyyy-mm-dd"
+        },
+        "source": {
+          "type": "string",
+          "description": "The origin or source from which the antibody was obtained."
+        },
+        "immune": {
+          "type": "integer",
+          "description": "Indicates the antibody's clonality: \"Monoclonal\" (immune = 1), \"Polyclonal\" (immune = 0), or \"None\" (Empty value).",
+          "example": 1
+        },
+        "organism_id": {
+          "type": "integer",
+          "description": "The ID for the organism in which the antibody was raised. This ID corresponds to specific organisms (e.g., 5 for Mouse, 6 for Chicken, etc.)."
+        },
+        "reacts_with": {
+          "type": "string",
+          "description": "Specifies the organism or group the antibody is reactive with, chosen from a predefined list of options such as \"Mouse\", \"Human\", \"Chicken\", and \"Zebrafish\", etc.",
+          "example": "Mouse"
+        },
+        "description": {
+          "type": "string",
+          "description": "A detailed description of the antibody"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/selectPerformer.json",
+  "title": "selectPerformer",
+  "type": "object",
+  "required": [
+    "token"
+  ],
+  "properties": {
+    "token": {
+      "type": "string",
+      "example": "YOUR TOKEN IS HERE"
+    },
+    "item": {
+      "type": "object",
+      "required": [
+        "performed_by"
+      ],
+      "properties": {
+        "performed_by": {
+          "type": "integer",
+          "description": "The ID of the member which will perform the request"
+        }
+      }
+    }
+  }
+}

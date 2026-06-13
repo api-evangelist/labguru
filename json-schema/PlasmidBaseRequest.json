@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/PlasmidBaseRequest.json",
+  "title": "PlasmidBaseRequest",
+  "type": "object",
+  "required": [
+    "token"
+  ],
+  "properties": {
+    "token": {
+      "type": "string",
+      "example": "YOUR TOKEN IS HERE"
+    },
+    "item": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "The name of the plasmid"
+        },
+        "alternative_name": {
+          "type": "string",
+          "description": "Any alternative name by which the plasmid may be known"
+        },
+        "owner_id": {
+          "type": "integer",
+          "description": "id of the owner - by default it's your member id"
+        },
+        "length": {
+          "type": "integer",
+          "description": "The total number of base pairs (bp) in the plasmid\u2019s DNA sequence."
+        },
+        "usage": {
+          "type": "string",
+          "description": "Intended or common uses of the plasmid (cloning, gene expression, etc.)"
+        },
+        "host": {
+          "type": "string",
+          "description": "Typical host organism for the plasmid"
+        },
+        "resistance": {
+          "type": "string",
+          "description": "Antibiotic resistance markers present in the plasmid"
+        },
+        "clone_number": {
+          "type": "string",
+          "description": "Unique identifier or clone number associated with the plasmid"
+        },
+        "source": {
+          "type": "string",
+          "description": "Origin or provider of the plasmid"
+        },
+        "sequence": {
+          "type": "string",
+          "description": "The nucleotide sequence of the plasmid"
+        },
+        "description": {
+          "type": "string",
+          "description": "A detailed description of the plasmid"
+        }
+      }
+    }
+  }
+}

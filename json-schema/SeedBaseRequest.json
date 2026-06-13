@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/SeedBaseRequest.json",
+  "title": "SeedBaseRequest",
+  "type": "object",
+  "required": [
+    "token"
+  ],
+  "properties": {
+    "token": {
+      "type": "string",
+      "example": "YOUR TOKEN IS HERE"
+    },
+    "item": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the seed"
+        },
+        "owner_id": {
+          "type": "integer",
+          "description": "id of the owner - if omitted, will default to your member id"
+        },
+        "genotype": {
+          "type": "string",
+          "description": "Genetic makeup of the seed"
+        },
+        "phenotype": {
+          "type": "string",
+          "description": "Observable physical or biochemical characteristics of the seed"
+        },
+        "generation": {
+          "type": "string",
+          "description": "Generational stage of the seed",
+          "example": "F0"
+        },
+        "male_parent_id": {
+          "type": "integer",
+          "description": "The ID of the male parent plant from your Labguru plants collection, if applicable."
+        },
+        "female_parent_id": {
+          "type": "integer",
+          "description": "The ID of the female parent plant from your Labguru plants collection, if applicable."
+        },
+        "source": {
+          "type": "string",
+          "description": "Origin of the seed"
+        },
+        "description": {
+          "type": "string",
+          "description": "Description of the seed"
+        }
+      }
+    }
+  }
+}

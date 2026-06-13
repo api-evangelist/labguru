@@ -1,0 +1,67 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/FlagBaseRequest.json",
+  "title": "FlagBaseRequest",
+  "type": "object",
+  "required": [
+    "token"
+  ],
+  "properties": {
+    "token": {
+      "type": "string",
+      "example": "YOUR TOKEN IS HERE"
+    },
+    "item": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Specifies the name of the flag"
+        },
+        "icon": {
+          "type": "string",
+          "description": "The icon of the flag",
+          "enum": [
+            "star",
+            "bolt",
+            "thumbs-up",
+            "thumbs-down",
+            "question",
+            "exclamation",
+            "bell",
+            "bell-slash",
+            "fire",
+            "sun"
+          ],
+          "example": "star"
+        },
+        "color": {
+          "type": "string",
+          "description": "The color of the flag",
+          "enum": [
+            "green-light",
+            "green",
+            "green-dark",
+            "red-light",
+            "red",
+            "red-dark",
+            "blue-light",
+            "blue",
+            "blue-dark",
+            "orange-light",
+            "orange",
+            "orange-dark",
+            "grey-light",
+            "grey",
+            "grey-dark"
+          ],
+          "example": "green"
+        },
+        "description": {
+          "type": "string",
+          "description": "General description of the flag"
+        }
+      }
+    }
+  }
+}

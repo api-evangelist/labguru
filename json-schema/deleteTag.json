@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/deleteTag.json",
+  "title": "deleteTag",
+  "type": "object",
+  "required": [
+    "token"
+  ],
+  "properties": {
+    "token": {
+      "type": "string",
+      "example": "YOUR TOKEN IS HERE"
+    },
+    "item": {
+      "type": "object",
+      "required": [
+        "tag",
+        "class_name",
+        "item_id"
+      ],
+      "properties": {
+        "tag": {
+          "type": "string",
+          "description": "the tag name to remove "
+        },
+        "class_name": {
+          "type": "string",
+          "description": "the item type to remove the tag from",
+          "example": "Biocollections::Antibody"
+        },
+        "item_id": {
+          "type": "string",
+          "description": "the id of the item to to remove the tag from"
+        }
+      }
+    }
+  }
+}

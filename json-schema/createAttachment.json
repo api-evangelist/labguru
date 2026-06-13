@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/createAttachment.json",
+  "title": "createAttachment",
+  "type": "object",
+  "properties": {
+    "token": {
+      "type": "string"
+    },
+    "item[attachment]": {
+      "type": "string",
+      "format": "binary",
+      "description": "The file that will be uploaded."
+    },
+    "item[title]": {
+      "type": "string",
+      "example": "Project_report.pdf",
+      "description": "The title of the attachment. <b>This should match the file name exactly, including the file extension (.xlsx, .csv, etc.)</b>."
+    },
+    "item[attach_to_uuid]": {
+      "type": "string",
+      "description": "The UUID of the object to which the attachment will be linked.<br>\n                If this parameter is not provided, the uploaded file will be stored but not associated with any specific entity (unattached file)."
+    },
+    "item[description]": {
+      "type": "string",
+      "example": "Detailed project report",
+      "description": "A brief description of the attachment content."
+    }
+  },
+  "required": [
+    "token",
+    "item[attachment]",
+    "item[title]"
+  ]
+}

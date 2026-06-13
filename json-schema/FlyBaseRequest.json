@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/FlyBaseRequest.json",
+  "title": "FlyBaseRequest",
+  "type": "object",
+  "required": [
+    "token"
+  ],
+  "properties": {
+    "token": {
+      "type": "string",
+      "example": "YOUR TOKEN IS HERE"
+    },
+    "item": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the fly"
+        },
+        "owner_id": {
+          "type": "integer",
+          "description": "id of the owner - by default it's your member id"
+        },
+        "source": {
+          "type": "string",
+          "description": "Origin of the fly."
+        },
+        "genotype": {
+          "type": "string",
+          "description": "Genetic makeup."
+        },
+        "phenotype": {
+          "type": "string",
+          "description": "Observable characteristics."
+        },
+        "breakpoints_insertions": {
+          "type": "string",
+          "description": "Genetic insertion points."
+        },
+        "ch_number": {
+          "type": "string",
+          "description": "Chromosome number."
+        },
+        "ch_te": {
+          "type": "string",
+          "description": "Transposable element in chromosome."
+        },
+        "description": {
+          "type": "string",
+          "description": "Description of the fly"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/BoxBaseRequest.json",
+  "title": "BoxBaseRequest",
+  "type": "object",
+  "required": [
+    "token"
+  ],
+  "properties": {
+    "token": {
+      "type": "string",
+      "example": "YOUR TOKEN IS HERE"
+    },
+    "item": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "the box name "
+        },
+        "rows": {
+          "type": "integer",
+          "description": "number of rows"
+        },
+        "cols": {
+          "type": "integer",
+          "description": "number of columns"
+        },
+        "box_type": {
+          "type": "integer",
+          "description": "one of the following: [[\"Primer\", 0], [\"General\", -1], [\"Tube\", -1], [\"Seed\", -2], [\"Fly\", -3], [\"Bacterium\", -4], [\"Cell Line\", -5], [\"Tissue\", -6], [\"Antibody\", -7], [\"Plasmid\", -8], [\"Glycerol\", -9], [\"Enzyme\", -10], [\"Consumable\", -11], [\"Yeast\", -12], [\"Fungus\", -13], [\"Virus\", -14], [\"Protein\", -15], [\"Lipid\", -16], [\"Worm\", -17], [\"Sequence\", -18], [\"Zebrafish\", -19], [\"Gene\", -20], [\"Compound\", -21]]",
+          "example": 0
+        },
+        "color": {
+          "type": "string",
+          "description": "[\"pink\", \"red\", \"orange\", \"yellow\", \"beige\", \"white\", \"blue\", \"purple\", \"green\", \"brown\", \"gray\", \"black\"]"
+        },
+        "shared": {
+          "type": "boolean",
+          "description": "Personal - false/ shared - true(default)"
+        },
+        "barcode": {
+          "type": "string",
+          "description": "the barcode of the box"
+        }
+      }
+    }
+  }
+}

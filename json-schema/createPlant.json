@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/createPlant.json",
+  "title": "createPlant",
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/PlantBaseRequest"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "item": {
+          "type": "object",
+          "required": [
+            "name"
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/RodentStrainBaseRequest.json",
+  "title": "RodentStrainBaseRequest",
+  "type": "object",
+  "required": [
+    "token"
+  ],
+  "properties": {
+    "token": {
+      "type": "string",
+      "example": "YOUR TOKEN IS HERE"
+    },
+    "item": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the strain"
+        },
+        "alternative_name": {
+          "type": "string",
+          "description": "additional name for the strain"
+        },
+        "transgene": {
+          "type": "string",
+          "description": "Transgene"
+        },
+        "genotype": {
+          "type": "string",
+          "description": "Genotype"
+        },
+        "phenotype": {
+          "type": "string",
+          "description": "Phenotype"
+        },
+        "owner_id": {
+          "type": "integer",
+          "description": "id of the owner - by default it's your member id"
+        },
+        "source": {
+          "type": "string",
+          "description": "Source"
+        },
+        "description": {
+          "type": "string",
+          "description": "Description of the strain"
+        }
+      }
+    }
+  }
+}

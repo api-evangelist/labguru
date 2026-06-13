@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/moveSection.json",
+  "title": "moveSection",
+  "type": "object",
+  "required": [
+    "token",
+    "container_id",
+    "container_type",
+    "list"
+  ],
+  "properties": {
+    "token": {
+      "type": "string",
+      "example": "YOUR TOKEN IS HERE"
+    },
+    "container_id": {
+      "type": "integer",
+      "description": "The id of the container"
+    },
+    "container_type": {
+      "type": "string",
+      "default": "Projects::Experiment",
+      "description": "The container type of the section"
+    },
+    "list": {
+      "type": "array",
+      "items": {
+        "type": "integer"
+      },
+      "description": "An array of section IDs.<br>\n                The order of IDs in this list defines the new arrangement of sections on the page",
+      "example": [
+        110,
+        111
+      ]
+    }
+  }
+}

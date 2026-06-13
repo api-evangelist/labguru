@@ -1,0 +1,78 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/RodentSpecimenBaseRequest.json",
+  "title": "RodentSpecimenBaseRequest",
+  "type": "object",
+  "required": [
+    "token"
+  ],
+  "properties": {
+    "token": {
+      "type": "string",
+      "example": "YOUR TOKEN IS HERE"
+    },
+    "item": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the rodent specimen"
+        },
+        "status": {
+          "type": "string",
+          "description": "the status of the rodent: alive, dead, missing, sacrificed"
+        },
+        "description": {
+          "type": "string",
+          "description": "Description of the rodent specimen"
+        },
+        "alternative_name": {
+          "type": "string",
+          "description": "additional name for the rodent specimen"
+        },
+        "owner_id": {
+          "type": "integer",
+          "description": "id of the owner - by default it's your member id"
+        },
+        "genotype": {
+          "type": "string",
+          "description": "genotype"
+        },
+        "phenotype": {
+          "type": "string",
+          "description": "phenotype"
+        },
+        "ear_tag": {
+          "type": "string",
+          "description": "ear tag"
+        },
+        "coat_tag": {
+          "type": "string",
+          "description": "coat tag"
+        },
+        "sex": {
+          "type": "string",
+          "description": "sex of the rodent: male, female, unknown"
+        },
+        "ethics": {
+          "type": "string",
+          "description": "ethics approval id"
+        },
+        "dob": {
+          "type": "string",
+          "format": "date",
+          "description": "Date of birth (yyyy-mm-dd)"
+        },
+        "dod": {
+          "type": "string",
+          "format": "date",
+          "description": "Date of death (yyyy-mm-dd)"
+        },
+        "source": {
+          "type": "string",
+          "description": "source"
+        }
+      }
+    }
+  }
+}

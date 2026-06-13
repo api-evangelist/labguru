@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/CompoundBaseRequest.json",
+  "title": "CompoundBaseRequest",
+  "type": "object",
+  "required": [
+    "token"
+  ],
+  "properties": {
+    "token": {
+      "type": "string",
+      "example": "YOUR TOKEN IS HERE"
+    },
+    "smiles": {
+      "type": "string",
+      "example": "C(=O)N1CCC(CCCC(=O)c2ccc(Cl)n(Cc3ncc(o3)-c3ccc(Cl)cc3)c2=O)CC1"
+    },
+    "item": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the compound"
+        },
+        "description": {
+          "type": "string",
+          "description": "Updated description of the compound"
+        },
+        "structure": {
+          "type": "string",
+          "description": "Compound structure",
+          "example": "C(=O)N1CCC(CCCC(=O)c2ccc(Cl)n(Cc3ncc(o3)-c3ccc(Cl)cc3)c2=O)CC1"
+        },
+        "cas": {
+          "type": "string",
+          "description": "Compound CAS"
+        },
+        "formula": {
+          "type": "string",
+          "description": "Compound formula"
+        },
+        "molar_mass": {
+          "type": "string",
+          "description": "Compound molar mass"
+        },
+        "density": {
+          "type": "string",
+          "description": "Compound density"
+        },
+        "boiling_point": {
+          "type": "string",
+          "description": "Compound boiling point"
+        },
+        "melting_point": {
+          "type": "string",
+          "description": "Compound melting point"
+        },
+        "hazards": {
+          "type": "string",
+          "description": "Compound hazards"
+        }
+      }
+    }
+  }
+}

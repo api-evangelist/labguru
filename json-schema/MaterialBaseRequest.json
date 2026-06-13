@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/MaterialBaseRequest.json",
+  "title": "MaterialBaseRequest",
+  "type": "object",
+  "required": [
+    "token"
+  ],
+  "properties": {
+    "token": {
+      "type": "string",
+      "example": "YOUR TOKEN IS HERE"
+    },
+    "item": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Material name"
+        },
+        "company_id": {
+          "type": "integer",
+          "description": "[required] - in case material is commercial"
+        },
+        "produce_by": {
+          "type": "string",
+          "description": "[required] - in case material is non commercial"
+        },
+        "description": {
+          "type": "string",
+          "description": "description"
+        },
+        "cas_number": {
+          "type": "integer",
+          "description": "CAS Registry Number"
+        },
+        "mw": {
+          "type": "string",
+          "description": "mw"
+        },
+        "web": {
+          "type": "string",
+          "description": "url"
+        },
+        "materialtype_id": {
+          "type": "integer",
+          "description": "the material type id"
+        },
+        "units": {
+          "type": "string",
+          "description": "units"
+        },
+        "price": {
+          "type": "number",
+          "format": "float",
+          "description": "price"
+        },
+        "currency": {
+          "type": "integer",
+          "description": "0 = NIS, 1 = DOLLAR, 2 = EURO, 3 = POUND, 4 = NOK "
+        }
+      }
+    }
+  }
+}

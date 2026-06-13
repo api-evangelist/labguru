@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/updateMaintenance.json",
+  "title": "updateMaintenance",
+  "type": "object",
+  "required": [
+    "token"
+  ],
+  "properties": {
+    "token": {
+      "type": "string",
+      "example": "YOUR TOKEN IS HERE"
+    },
+    "item": {
+      "type": "object",
+      "required": [
+        "item_id"
+      ],
+      "properties": {
+        "item_id": {
+          "type": "integer",
+          "description": "the id of the equipment"
+        },
+        "frequency_period": {
+          "type": "integer",
+          "description": "the time period in numbers",
+          "example": "15"
+        },
+        "frequency_frame": {
+          "type": "string",
+          "description": "one of the following time frames - hour/day/week/month/year",
+          "example": "day"
+        }
+      }
+    }
+  }
+}

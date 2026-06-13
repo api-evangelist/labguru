@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/createMaintenanceTemplate.json",
+  "title": "createMaintenanceTemplate",
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/MaintenanceTemplateBaseRequest"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "item": {
+          "type": "object",
+          "required": [
+            "equipment_type",
+            "maintenance_type_id",
+            "data"
+          ]
+        }
+      }
+    }
+  ]
+}

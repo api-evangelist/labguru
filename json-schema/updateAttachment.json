@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/updateAttachment.json",
+  "title": "updateAttachment",
+  "type": "object",
+  "required": [
+    "token"
+  ],
+  "properties": {
+    "token": {
+      "type": "string",
+      "example": "YOUR TOKEN IS HERE"
+    },
+    "item": {
+      "type": "object",
+      "required": [
+        "element_id"
+      ],
+      "properties": {
+        "element_id": {
+          "type": "integer",
+          "description": "The ID of the attachment element to which the attachment will be linked"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/addItem.json",
+  "title": "Add item",
+  "type": "object",
+  "required": [
+    "token"
+  ],
+  "properties": {
+    "token": {
+      "type": "string",
+      "example": "YOUR TOKEN IS HERE"
+    },
+    "item": {
+      "type": "object",
+      "required": [
+        "collection_type",
+        "item_id",
+        "quantity"
+      ],
+      "properties": {
+        "collection_type": {
+          "type": "string",
+          "description": "The type of collection, specified in singular form, such as - Biocollections::Antibody"
+        },
+        "item_id": {
+          "type": "integer",
+          "description": "The id of the item to be added to the shopping list"
+        },
+        "price": {
+          "type": "number",
+          "format": "float",
+          "description": "The price of the item"
+        },
+        "currency": {
+          "type": "integer"
+        },
+        "quantity": {
+          "type": "integer",
+          "description": "The number of units of the item to be added to the shopping list."
+        },
+        "remarks": {
+          "type": "string",
+          "description": "Additional comments or special instructions related to the item."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/NoteBaseRequest.json",
+  "title": "NoteBaseRequest",
+  "type": "object",
+  "required": [
+    "token"
+  ],
+  "properties": {
+    "token": {
+      "type": "string",
+      "example": "YOUR TOKEN IS HERE"
+    },
+    "item": {
+      "type": "object",
+      "required": [
+        "title",
+        "project_id"
+      ],
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "the note title "
+        },
+        "body": {
+          "type": "string",
+          "description": "body description of the note"
+        },
+        "project_id": {
+          "type": "integer",
+          "description": "the project id to add note to"
+        }
+      }
+    }
+  }
+}

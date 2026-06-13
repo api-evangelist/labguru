@@ -1,0 +1,146 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/indexFiltering.json",
+  "title": "indexFiltering",
+  "type": "object",
+  "required": [
+    "kendo"
+  ],
+  "properties": {
+    "kendo": {
+      "type": "string",
+      "example": "true"
+    },
+    "filter": {
+      "type": "object",
+      "properties": {
+        "logic": {
+          "type": "string",
+          "example": "and",
+          "description": "Filter logic (e.g., \"and\" or \"or\")"
+        },
+        "filters": {
+          "type": "object",
+          "description": "Array of filter objects",
+          "properties": {
+            "0": {
+              "type": "object",
+              "description": "Filter object",
+              "properties": {
+                "field": {
+                  "type": "string",
+                  "example": "name",
+                  "description": "Field name to filter by"
+                },
+                "operator": {
+                  "type": "string",
+                  "example": "contains",
+                  "description": "Filter operator (e.g., \"contains\")"
+                },
+                "value": {
+                  "type": "string",
+                  "example": "myValue",
+                  "description": "Filter value"
+                }
+              }
+            },
+            "1": {
+              "type": "object",
+              "description": "Filter object",
+              "properties": {
+                "field": {
+                  "type": "string",
+                  "example": "id",
+                  "description": "Field name to filter by"
+                },
+                "operator": {
+                  "type": "string",
+                  "example": "_eq",
+                  "description": "Filter operator (e.g., \"_eq\")"
+                },
+                "value": {
+                  "type": "integer",
+                  "example": "172",
+                  "description": "Filter value"
+                }
+              }
+            },
+            "2": {
+              "type": "object",
+              "description": "Filter object",
+              "properties": {
+                "field": {
+                  "type": "string",
+                  "example": "stored_on",
+                  "description": "Field name to filter by"
+                },
+                "operator": {
+                  "type": "string",
+                  "example": "_gt",
+                  "description": "Filter operator (e.g., \"_gt\")"
+                },
+                "value": {
+                  "type": "string",
+                  "format": "date",
+                  "description": "Filter value - Date in the following format 'YYYY-MM-DD'",
+                  "example": "2023-01-11"
+                }
+              }
+            },
+            "3": {
+              "type": "object",
+              "description": "Filter object",
+              "properties": {
+                "field": {
+                  "type": "string",
+                  "example": "content",
+                  "description": "Field name to filter by"
+                },
+                "operator": {
+                  "type": "string",
+                  "example": "startswith",
+                  "description": "Filter operator (e.g., \"startswith\")"
+                },
+                "value": {
+                  "type": "string",
+                  "example": "pla",
+                  "description": "Filter value"
+                }
+              }
+            },
+            "4": {
+              "type": "object",
+              "description": "Filter object",
+              "properties": {
+                "field": {
+                  "type": "string",
+                  "example": "stored_by",
+                  "description": "Field name to filter by"
+                },
+                "operator": {
+                  "type": "string",
+                  "example": "contains",
+                  "description": "Filter operator (e.g., \"contains\")"
+                },
+                "value": {
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "example": "User Name",
+                      "description": "User name to filter by"
+                    },
+                    "id": {
+                      "type": "string",
+                      "example": "[1]",
+                      "description": "User id in the following format \"[1]\""
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

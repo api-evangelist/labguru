@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/createLink.json",
+  "title": "createLink",
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/LinkBaseRequest"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "item": {
+          "type": "object",
+          "required": [
+            "source_id",
+            "source_type",
+            "target_id",
+            "target_type",
+            "source_uuid",
+            "target_uuid"
+          ]
+        }
+      }
+    }
+  ]
+}

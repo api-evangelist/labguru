@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/assignItemToDataset.json",
+  "title": "assignItemToDataset",
+  "type": "object",
+  "required": [
+    "token"
+  ],
+  "properties": {
+    "token": {
+      "type": "string",
+      "example": "YOUR TOKEN IS HERE"
+    },
+    "item": {
+      "type": "object",
+      "required": [
+        "item_type",
+        "item_id"
+      ],
+      "properties": {
+        "item_type": {
+          "type": "string",
+          "description": "the item type to attach the dataset to"
+        },
+        "item_id": {
+          "type": "integer",
+          "description": "the id of the item"
+        }
+      }
+    }
+  }
+}

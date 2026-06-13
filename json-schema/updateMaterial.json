@@ -1,0 +1,10 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/updateMaterial.json",
+  "title": "updateMaterial",
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/MaterialBaseRequest"
+    }
+  ]
+}

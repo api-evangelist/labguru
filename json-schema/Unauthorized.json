@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/Unauthorized.json",
+  "title": "Unauthorized",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "example": "You are not authorized to perform this action"
+    }
+  }
+}

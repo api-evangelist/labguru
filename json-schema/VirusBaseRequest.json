@@ -1,0 +1,92 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/VirusBaseRequest.json",
+  "title": "VirusBaseRequest",
+  "type": "object",
+  "required": [
+    "token"
+  ],
+  "properties": {
+    "token": {
+      "type": "string",
+      "example": "YOUR TOKEN IS HERE"
+    },
+    "item": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the virus"
+        },
+        "alternative_name": {
+          "type": "string",
+          "description": "alternative name for the virus"
+        },
+        "gene_insert": {
+          "type": "string",
+          "description": "Specific gene or genetic insert present in the virus"
+        },
+        "virus_type": {
+          "type": "string",
+          "description": "The virus type"
+        },
+        "plasmid": {
+          "type": "string",
+          "description": "The plasmid that is used in the creation or manipulation of the virus"
+        },
+        "serotype_strain": {
+          "type": "string",
+          "description": "serotype or strain of the virus"
+        },
+        "mutations_deletions": {
+          "type": "string",
+          "description": "genetic mutations or deletions within the virus details"
+        },
+        "tag": {
+          "type": "string",
+          "description": "Tag"
+        },
+        "selectable_marker": {
+          "type": "string",
+          "description": "Selectable marker"
+        },
+        "producer_cell_type": {
+          "type": "string",
+          "description": "Producer cell type"
+        },
+        "viral_coat": {
+          "type": "string",
+          "description": "Viral coat"
+        },
+        "tropism": {
+          "type": "string",
+          "description": "Tropism"
+        },
+        "species": {
+          "type": "string",
+          "description": "The species from which the virus was isolated or generated"
+        },
+        "safety_information": {
+          "type": "string",
+          "description": "safety information details"
+        },
+        "storage_conditions": {
+          "type": "string",
+          "description": "Conditions under which the virus should be stored"
+        },
+        "owner_id": {
+          "type": "integer",
+          "description": "id of the owner - by default it's your member id"
+        },
+        "source": {
+          "type": "string",
+          "description": "The origin of the virus"
+        },
+        "description": {
+          "type": "string",
+          "description": "Description of the virus"
+        }
+      }
+    }
+  }
+}

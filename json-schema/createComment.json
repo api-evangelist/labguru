@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/createComment.json",
+  "title": "createComment",
+  "type": "object",
+  "required": [
+    "token"
+  ],
+  "properties": {
+    "token": {
+      "type": "string",
+      "example": "YOUR TOKEN IS HERE"
+    },
+    "item": {
+      "type": "object",
+      "required": [
+        "comment",
+        "commentable_id",
+        "commentable_type"
+      ],
+      "properties": {
+        "comment": {
+          "type": "string",
+          "description": "The text content of the comment"
+        },
+        "commentable_id": {
+          "type": "integer",
+          "description": "The id of the item to which the comment is being added"
+        },
+        "commentable_type": {
+          "type": "string",
+          "description": "Specifies the class name of the item to which the comment is attached, such as Biocollections::Plasmid"
+        }
+      }
+    }
+  }
+}

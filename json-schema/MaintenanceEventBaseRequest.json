@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/MaintenanceEventBaseRequest.json",
+  "title": "MaintenanceEventBaseRequest",
+  "type": "object",
+  "required": [
+    "token"
+  ],
+  "properties": {
+    "token": {
+      "type": "string",
+      "example": "YOUR TOKEN IS HERE"
+    },
+    "item": {
+      "type": "object",
+      "properties": {
+        "item_id": {
+          "type": "integer",
+          "description": "the equipment id"
+        },
+        "item_type": {
+          "type": "string",
+          "description": "equipment class name",
+          "example": "System::Instrument"
+        },
+        "maintenance_id": {
+          "type": "integer",
+          "description": "maintenance id"
+        },
+        "data": {
+          "type": "string",
+          "description": "templates fields in the follwing json format",
+          "example": "[{\"title\":\"Detergent\",\"value\":\"Wateriii:\"}]"
+        },
+        "performed_at": {
+          "type": "string",
+          "format": "date",
+          "description": "performance data"
+        },
+        "performed_by": {
+          "type": "integer",
+          "description": "member id"
+        }
+      }
+    }
+  }
+}

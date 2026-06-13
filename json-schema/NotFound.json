@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/NotFound.json",
+  "title": "NotFound",
+  "type": "object",
+  "properties": {
+    "error": {
+      "type": "string",
+      "example": "Resource not found"
+    }
+  }
+}

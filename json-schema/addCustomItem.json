@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/addCustomItem.json",
+  "title": "Add custom item",
+  "type": "object",
+  "required": [
+    "token"
+  ],
+  "properties": {
+    "token": {
+      "type": "string",
+      "example": "YOUR TOKEN IS HERE"
+    },
+    "item": {
+      "type": "object",
+      "required": [
+        "collection_type",
+        "collection_id",
+        "item_id",
+        "quantity"
+      ],
+      "properties": {
+        "collection_type": {
+          "type": "string",
+          "description": "The name of the custom collection to which the item belongs."
+        },
+        "collection_id": {
+          "type": "integer",
+          "description": "The id of the custom collection within the system."
+        },
+        "item_id": {
+          "type": "integer",
+          "description": "The id of the item to be added to the shopping list"
+        },
+        "price": {
+          "type": "number",
+          "format": "float",
+          "description": "The price of the item"
+        },
+        "currency": {
+          "type": "integer"
+        },
+        "quantity": {
+          "type": "integer",
+          "description": "The number of units of the item to be added to the shopping list."
+        },
+        "remarks": {
+          "type": "string",
+          "description": "Additional comments or special instructions related to the item."
+        }
+      }
+    }
+  }
+}

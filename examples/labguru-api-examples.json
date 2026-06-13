@@ -1,0 +1,192 @@
+{
+  "examples": [
+    {
+      "name": "createSession",
+      "schema": "createSession",
+      "example": {
+        "login": "labuser@email.com",
+        "password": "string",
+        "account_id": 0
+      }
+    },
+    {
+      "name": "createAttachment",
+      "schema": "createAttachment",
+      "example": {
+        "token": "string",
+        "item[attachment]": "string",
+        "item[title]": "Project_report.pdf",
+        "item[attach_to_uuid]": "string",
+        "item[description]": "Detailed project report"
+      }
+    },
+    {
+      "name": "updateAttachment",
+      "schema": "updateAttachment",
+      "example": {
+        "token": "YOUR TOKEN IS HERE",
+        "item": {
+          "element_id": 0
+        }
+      }
+    },
+    {
+      "name": "createWorm",
+      "schema": "createWorm",
+      "example": {}
+    },
+    {
+      "name": "updateWorm",
+      "schema": "updateWorm",
+      "example": {}
+    },
+    {
+      "name": "createAntibody",
+      "schema": "createAntibody",
+      "example": {}
+    },
+    {
+      "name": "updateAntibody",
+      "schema": "updateAntibody",
+      "example": {}
+    },
+    {
+      "name": "updateExperiment",
+      "schema": "updateExperiment",
+      "example": {}
+    },
+    {
+      "name": "createPlasmid",
+      "schema": "createPlasmid",
+      "example": {}
+    },
+    {
+      "name": "updatePlasmid",
+      "schema": "updatePlasmid",
+      "example": {}
+    },
+    {
+      "name": "createSOP",
+      "schema": "createSOP",
+      "example": {}
+    },
+    {
+      "name": "updateSOP",
+      "schema": "updateSOP",
+      "example": {}
+    },
+    {
+      "name": "createComment",
+      "schema": "createComment",
+      "example": {
+        "token": "YOUR TOKEN IS HERE",
+        "item": {
+          "comment": "string",
+          "commentable_id": 0,
+          "commentable_type": "string"
+        }
+      }
+    },
+    {
+      "name": "createLink",
+      "schema": "createLink",
+      "example": {}
+    },
+    {
+      "name": "updateLink",
+      "schema": "updateLink",
+      "example": {}
+    },
+    {
+      "name": "createCompound",
+      "schema": "createCompound",
+      "example": {}
+    },
+    {
+      "name": "updateCompound",
+      "schema": "updateCompound",
+      "example": {}
+    },
+    {
+      "name": "createTask",
+      "schema": "createTask",
+      "example": {}
+    },
+    {
+      "name": "updateTask",
+      "schema": "updateTask",
+      "example": {}
+    },
+    {
+      "name": "createRodentCage",
+      "schema": "createRodentCage",
+      "example": {}
+    },
+    {
+      "name": "updateRodentCage",
+      "schema": "updateRodentCage",
+      "example": {}
+    },
+    {
+      "name": "createGene",
+      "schema": "createGene",
+      "example": {}
+    },
+    {
+      "name": "updateGene",
+      "schema": "updateGene",
+      "example": {}
+    },
+    {
+      "name": "createVirus",
+      "schema": "createVirus",
+      "example": {}
+    },
+    {
+      "name": "updateVirus",
+      "schema": "updateVirus",
+      "example": {}
+    },
+    {
+      "name": "createLipid",
+      "schema": "createLipid",
+      "example": {}
+    },
+    {
+      "name": "updateLipid",
+      "schema": "updateLipid",
+      "example": {}
+    },
+    {
+      "name": "createYeast",
+      "schema": "createYeast",
+      "example": {}
+    },
+    {
+      "name": "updateYeast",
+      "schema": "updateYeast",
+      "example": {}
+    },
+    {
+      "name": "createProject",
+      "schema": "createProject",
+      "example": {}
+    },
+    {
+      "name": "updateProject",
+      "schema": "updateProject",
+      "example": {}
+    },
+    {
+      "name": "createBacterium",
+      "schema": "createBacterium",
+      "example": {}
+    },
+    {
+      "name": "updateBacterium",
+      "schema": "updateBacterium",
+      "example": {}
+    }
+  ],
+  "source": "generated from OpenAPI schemas"
+}

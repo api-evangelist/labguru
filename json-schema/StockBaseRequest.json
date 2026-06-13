@@ -1,0 +1,135 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/StockBaseRequest.json",
+  "title": "StockBaseRequest",
+  "type": "object",
+  "required": [
+    "token"
+  ],
+  "properties": {
+    "token": {
+      "type": "string",
+      "example": "YOUR TOKEN IS HERE"
+    },
+    "item": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "the stock name "
+        },
+        "storage_id": {
+          "type": "integer",
+          "description": "type of storages: 1 - Room, 21 - Shelf, 61 - Closet, 81 - Drawer, 111 - Cage, 120 - Refrigerator ,121 - Freezer, 181 - Rack Cell , 201 - Cryo container, 251 - Slide Rack, 261 - Rack Cell, 322 - Rack, 323 - Rack Cell, 321 - Other"
+        },
+        "storage_type": {
+          "type": "string",
+          "description": "storage class name - [Box - System::Storage::Box] [all other storages type - System::Storage::Storage] "
+        },
+        "stockable_type": {
+          "type": "string",
+          "description": "class name of the stockable item type, such as: Biocollections::Antibody"
+        },
+        "stockable_id": {
+          "type": "integer",
+          "description": "stockable item id"
+        },
+        "location_in_box": {
+          "type": "integer",
+          "description": "if storage is grid box, indicates numerical location in box"
+        },
+        "owner_id": {
+          "type": "integer",
+          "description": "id of the owner - by default it's your member id"
+        },
+        "expiration_date": {
+          "type": "string",
+          "format": "date",
+          "description": "in the following format: yyyy-mm-dd "
+        },
+        "lot": {
+          "type": "string",
+          "description": "number of batch"
+        },
+        "description": {
+          "type": "string",
+          "description": "general description"
+        },
+        "barcode": {
+          "type": "string",
+          "description": "barcode "
+        },
+        "stored_by": {
+          "type": "integer",
+          "description": "member id"
+        },
+        "concentration": {
+          "type": "string",
+          "description": "concentration"
+        },
+        "concentration_prefix": {
+          "type": "string",
+          "description": "x10^/E^",
+          "example": "E^"
+        },
+        "concentration_unit_id": {
+          "type": "integer",
+          "description": "9-mg/mL, 10-g/L, 11-M, 12-mM, 13-\u00b5M, 14-\u00b5g/mL, 15-ng/\u00b5L, 16-ratio, 17-%, 18-g/mL",
+          "example": 9
+        },
+        "concentration_exponent": {
+          "type": "integer",
+          "description": "concentration exponent"
+        },
+        "concentration_remarks": {
+          "type": "string",
+          "description": "concentration remarks"
+        },
+        "volume": {
+          "type": "string",
+          "description": "volume"
+        },
+        "volume_prefix": {
+          "type": "string",
+          "description": "x10^/E^",
+          "example": "E^"
+        },
+        "volume_unit_id": {
+          "type": "integer",
+          "description": "6-L, 7-mL, 8-\u00b5L",
+          "example": 7
+        },
+        "volume_exponent": {
+          "type": "integer",
+          "description": "volume exponent"
+        },
+        "volume_remarks": {
+          "type": "string",
+          "description": "volume remarks"
+        },
+        "weight": {
+          "type": "string",
+          "description": "weight"
+        },
+        "weight_prefix": {
+          "type": "string",
+          "description": "x10^/E^",
+          "example": "E^"
+        },
+        "weight_unit_id": {
+          "type": "integer",
+          "description": "1 -Kg, 2-g, 3-mg, 4-\u00b5g, 5-ng",
+          "example": 3
+        },
+        "weight_exponent": {
+          "type": "integer",
+          "description": "weight exponent"
+        },
+        "weight_remarks": {
+          "type": "string",
+          "description": "weight remarks"
+        }
+      }
+    }
+  }
+}

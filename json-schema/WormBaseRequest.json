@@ -1,0 +1,69 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/WormBaseRequest.json",
+  "title": "WormBaseRequest",
+  "type": "object",
+  "required": [
+    "token"
+  ],
+  "properties": {
+    "token": {
+      "type": "string",
+      "example": "YOUR TOKEN IS HERE"
+    },
+    "item": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the worm"
+        },
+        "alternative_name": {
+          "type": "string",
+          "description": "An alternative name for the worm"
+        },
+        "gene_id": {
+          "type": "integer",
+          "description": "An ID reference to a gene from your labguru genes collection"
+        },
+        "source": {
+          "type": "string",
+          "description": "Origin of the worm"
+        },
+        "genotype": {
+          "type": "string",
+          "description": "Genetic constitution of the worm"
+        },
+        "phenotype": {
+          "type": "string",
+          "description": "Observable physical or biochemical characteristics of the worm"
+        },
+        "mutagen": {
+          "type": "string",
+          "description": "The agent used to induce mutations in the worm"
+        },
+        "growth_conditions": {
+          "type": "string",
+          "description": "Specific conditions under which the worm is maintained"
+        },
+        "outcrossed": {
+          "type": "integer",
+          "description": "Number of times the worm strain has been outcrossed with another"
+        },
+        "made_by": {
+          "type": "string",
+          "description": "researcher name input"
+        },
+        "dauer_defective": {
+          "type": "boolean",
+          "description": "Indicates whether the worm is defective in entering or exiting the dauer stage,\n                    with '1' for yes and '0' for no.",
+          "example": 0
+        },
+        "description": {
+          "type": "string",
+          "description": "Description of the worm"
+        }
+      }
+    }
+  }
+}

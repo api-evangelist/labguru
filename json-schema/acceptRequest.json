@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/acceptRequest.json",
+  "title": "acceptRequest",
+  "type": "object",
+  "required": [
+    "token"
+  ],
+  "properties": {
+    "token": {
+      "type": "string",
+      "example": "YOUR TOKEN IS HERE"
+    },
+    "item": {
+      "type": "object",
+      "properties": {
+        "priority": {
+          "type": "string",
+          "description": "Specifies the priority level of the request. By default - Low",
+          "enum": [
+            "Low",
+            "Medium",
+            "High",
+            "Urgent"
+          ],
+          "example": "Medium"
+        }
+      }
+    }
+  }
+}

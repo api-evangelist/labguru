@@ -38,7 +38,9 @@ apis:
       - type: Documentation
         url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
       - type: OpenAPI
-        url: https://my.labguru.com/api-docs/index.html
+        url: https://raw.githubusercontent.com/api-evangelist/labguru/refs/heads/main/openapi/labguru-rest-api-v1.yaml
+      - type: OpenAPI
+        url: https://raw.githubusercontent.com/api-evangelist/labguru/refs/heads/main/openapi/labguru-rest-api-v2.yaml
       - type: Changelog
         url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
       - type: Authentication

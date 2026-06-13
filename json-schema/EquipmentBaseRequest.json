@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/labguru/main/json-schema/EquipmentBaseRequest.json",
+  "title": "EquipmentBaseRequest",
+  "type": "object",
+  "required": [
+    "token"
+  ],
+  "properties": {
+    "token": {
+      "type": "string",
+      "example": "YOUR TOKEN IS HERE"
+    },
+    "item": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "the equipment name"
+        },
+        "model_number": {
+          "type": "string",
+          "description": "model number of the equipment"
+        },
+        "serial_number": {
+          "type": "string",
+          "description": "serial number of the equipment "
+        },
+        "equipment_type": {
+          "type": "string",
+          "description": "equipment type "
+        },
+        "manufacturer": {
+          "type": "string",
+          "description": "manufacturer name "
+        },
+        "purchase_date": {
+          "type": "string",
+          "format": "date",
+          "description": "purchase date "
+        },
+        "warranty_expired": {
+          "type": "string",
+          "format": "date",
+          "description": "warranty_expired "
+        },
+        "maintenance_information": {
+          "type": "string",
+          "description": "maintenance information "
+        },
+        "description": {
+          "type": "string",
+          "description": "general description "
+        }
+      }
+    }
+  }
+}
