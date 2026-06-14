@@ -1,0 +1,594 @@
+"""
+Labguru GraphQL Schema
+Conceptual SDL schema derived from Labguru's documented REST API data model.
+Labguru is an ELN/LIMS platform for life sciences lab management.
+Endpoint: https://app.labguru.com/graphql
+Docs: https://www.labguru.com/developer-tools
+"""
+
+scalar DateTime
+scalar JSON
+scalar Upload
+
+# ─── Enums ───────────────────────────────────────────────────────────────────
+
+enum PermissionRole {
+  OWNER
+  ADMIN
+  EDITOR
+  VIEWER
+  COMMENTER
+}
+
+enum TaskStatus {
+  PENDING
+  IN_PROGRESS
+  COMPLETED
+  CANCELLED
+  ON_HOLD
+}
+
+enum WorkflowStatus {
+  DRAFT
+  ACTIVE
+  COMPLETED
+  ARCHIVED
+}
+
+enum OrderStatus {
+  DRAFT
+  SUBMITTED
+  APPROVED
+  ORDERED
+  RECEIVED
+  CANCELLED
+}
+
+enum StorageType {
+  FREEZER
+  FRIDGE
+  ROOM_TEMPERATURE
+  INCUBATOR
+  CABINET
+  SHELF
+  BOX
+  RACK
+  PLATE
+}
+
+enum AttachmentType {
+  IMAGE
+  DOCUMENT
+  SPREADSHEET
+  PDF
+  RAW_DATA
+  OTHER
+}
+
+enum EquipmentStatus {
+  OPERATIONAL
+  MAINTENANCE
+  OUT_OF_SERVICE
+  DECOMMISSIONED
+}
+
+# ─── User & Collaboration ─────────────────────────────────────────────────────
+
+"""A Labguru platform user."""
+type User {
+  id: ID!
+  email: String!
+  firstName: String
+  lastName: String
+  fullName: String
+  username: String
+  avatar: String
+  role: String
+  teams: [Team!]
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+"""A team grouping users within an organization."""
+type Team {
+  id: ID!
+  name: String!
+  description: String
+  members: [User!]
+  permissions: [CollaborationPermission!]
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+"""Access control permission assigned to a user or team on a resource."""
+type CollaborationPermission {
+  id: ID!
+  role: PermissionRole!
+  user: User
+  team: Team
+  resourceType: String!
+  resourceId: ID!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+# ─── Project Management ───────────────────────────────────────────────────────
+
+"""A top-level research project grouping experiments, protocols, and milestones."""
+type Project {
+  id: ID!
+  name: String!
+  description: String
+  status: String
+  owner: User
+  collaborators: [User!]
+  permissions: [CollaborationPermission!]
+  experiments: [Experiment!]
+  milestones: [Milestone!]
+  workflows: [Workflow!]
+  tasks: [Task!]
+  attachments: [Attachment!]
+  tags: [String!]
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+"""A milestone within a project representing a key deliverable or checkpoint."""
+type Milestone {
+  id: ID!
+  name: String!
+  description: String
+  project: Project!
+  dueDate: DateTime
+  completedAt: DateTime
+  status: TaskStatus
+  tasks: [Task!]
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+"""A workflow defining a sequence of steps or procedures."""
+type Workflow {
+  id: ID!
+  name: String!
+  description: String
+  status: WorkflowStatus!
+  project: Project
+  steps: [Task!]
+  createdBy: User
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+"""An individual task within a project, milestone, or workflow."""
+type Task {
+  id: ID!
+  title: String!
+  description: String
+  status: TaskStatus!
+  assignee: User
+  dueDate: DateTime
+  completedAt: DateTime
+  project: Project
+  milestone: Milestone
+  workflow: Workflow
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+# ─── Research & ELN ──────────────────────────────────────────────────────────
+
+"""An electronic laboratory notebook grouping experiments and protocols."""
+type Notebook {
+  id: ID!
+  name: String!
+  description: String
+  owner: User
+  collaborators: [User!]
+  permissions: [CollaborationPermission!]
+  experiments: [Experiment!]
+  protocols: [Protocol!]
+  attachments: [Attachment!]
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+"""A laboratory experiment record within a notebook or project."""
+type Experiment {
+  id: ID!
+  name: String!
+  description: String
+  hypothesis: String
+  conclusion: String
+  notebook: Notebook
+  project: Project
+  protocol: Protocol
+  sections: [ExperimentSection!]
+  samples: [Sample!]
+  attachments: [Attachment!]
+  collaborators: [User!]
+  permissions: [CollaborationPermission!]
+  tags: [String!]
+  startedAt: DateTime
+  completedAt: DateTime
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+"""A section within an experiment (e.g., Materials & Methods, Results, Discussion)."""
+type ExperimentSection {
+  id: ID!
+  title: String!
+  content: String
+  order: Int!
+  experiment: Experiment!
+  attachments: [Attachment!]
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+"""A standardized protocol defining a repeatable experimental procedure."""
+type Protocol {
+  id: ID!
+  name: String!
+  description: String
+  steps: [ProtocolStep!]
+  version: String
+  author: User
+  notebook: Notebook
+  experiments: [Experiment!]
+  attachments: [Attachment!]
+  tags: [String!]
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+"""A single step within a protocol."""
+type ProtocolStep {
+  id: ID!
+  order: Int!
+  title: String
+  description: String!
+  duration: Int
+  protocol: Protocol!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+"""A file or document attached to an experiment, protocol, project, or other entity."""
+type Attachment {
+  id: ID!
+  filename: String!
+  fileType: AttachmentType
+  fileSize: Int
+  url: String
+  description: String
+  uploadedBy: User
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+# ─── Inventory & Materials ────────────────────────────────────────────────────
+
+"""A biological or chemical sample used in experiments."""
+type Sample {
+  id: ID!
+  name: String!
+  description: String
+  sampleType: String
+  barcode: String
+  concentration: Float
+  concentrationUnit: String
+  volume: Float
+  volumeUnit: String
+  storage: Storage
+  location: Location
+  stockItems: [StockItem!]
+  experiment: Experiment
+  attachments: [Attachment!]
+  tags: [String!]
+  createdBy: User
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+"""A chemical reagent used in lab procedures."""
+type Reagent {
+  id: ID!
+  name: String!
+  description: String
+  catalogNumber: String
+  supplier: String
+  casNumber: String
+  lotNumber: String
+  purity: String
+  concentration: Float
+  concentrationUnit: String
+  storage: Storage
+  location: Location
+  stockItems: [StockItem!]
+  safetyDataSheetUrl: String
+  expirationDate: DateTime
+  tags: [String!]
+  createdBy: User
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+"""A general lab material (consumable, chemical, biological material)."""
+type Material {
+  id: ID!
+  name: String!
+  description: String
+  materialType: String
+  catalogNumber: String
+  supplier: String
+  unit: String
+  quantity: Float
+  minQuantity: Float
+  storage: Storage
+  location: Location
+  stockItems: [StockItem!]
+  tags: [String!]
+  createdBy: User
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+"""A stock item representing a specific physical vial, tube, or container in inventory."""
+type StockItem {
+  id: ID!
+  barcode: String
+  lotNumber: String
+  quantity: Float
+  unit: String
+  concentration: Float
+  concentrationUnit: String
+  expirationDate: DateTime
+  storage: Storage
+  location: Location
+  sample: Sample
+  reagent: Reagent
+  material: Material
+  notes: String
+  createdBy: User
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+"""A storage unit (freezer, fridge, incubator, cabinet) for lab inventory."""
+type Storage {
+  id: ID!
+  name: String!
+  storageType: StorageType!
+  description: String
+  temperature: Float
+  temperatureUnit: String
+  location: Location
+  children: [Storage!]
+  parent: Storage
+  items: [StockItem!]
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+"""A physical location (room, building, site) for equipment and storage units."""
+type Location {
+  id: ID!
+  name: String!
+  description: String
+  address: String
+  parent: Location
+  children: [Location!]
+  storageUnits: [Storage!]
+  equipment: [Equipment!]
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+# ─── Equipment ────────────────────────────────────────────────────────────────
+
+"""A laboratory equipment item or instrument."""
+type Equipment {
+  id: ID!
+  name: String!
+  description: String
+  equipmentType: String
+  manufacturer: String
+  model: String
+  serialNumber: String
+  assetTag: String
+  status: EquipmentStatus!
+  location: Location
+  purchaseDate: DateTime
+  warrantyExpiry: DateTime
+  lastMaintenanceDate: DateTime
+  nextMaintenanceDate: DateTime
+  calibrationDueDate: DateTime
+  responsibleUser: User
+  attachments: [Attachment!]
+  tags: [String!]
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+# ─── Procurement ──────────────────────────────────────────────────────────────
+
+"""A purchase order for lab supplies, reagents, or equipment."""
+type Order {
+  id: ID!
+  orderNumber: String
+  status: OrderStatus!
+  supplier: String
+  totalAmount: Float
+  currency: String
+  requestedBy: User
+  approvedBy: User
+  items: [OrderItem!]
+  invoices: [Invoice!]
+  notes: String
+  orderedAt: DateTime
+  receivedAt: DateTime
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+"""A line item within a purchase order."""
+type OrderItem {
+  id: ID!
+  order: Order!
+  name: String!
+  catalogNumber: String
+  quantity: Float
+  unit: String
+  unitPrice: Float
+  totalPrice: Float
+  material: Material
+  reagent: Reagent
+  equipment: Equipment
+  receivedQuantity: Float
+  notes: String
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+"""An invoice associated with a purchase order."""
+type Invoice {
+  id: ID!
+  invoiceNumber: String!
+  order: Order
+  supplier: String
+  amount: Float!
+  currency: String
+  issuedAt: DateTime
+  dueAt: DateTime
+  paidAt: DateTime
+  attachment: Attachment
+  notes: String
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+# ─── Query ────────────────────────────────────────────────────────────────────
+
+type Query {
+  # Users & Teams
+  me: User
+  user(id: ID!): User
+  users(limit: Int, offset: Int): [User!]!
+  team(id: ID!): Team
+  teams(limit: Int, offset: Int): [Team!]!
+
+  # Projects & Tasks
+  project(id: ID!): Project
+  projects(limit: Int, offset: Int, search: String): [Project!]!
+  milestone(id: ID!): Milestone
+  milestones(projectId: ID, limit: Int, offset: Int): [Milestone!]!
+  workflow(id: ID!): Workflow
+  workflows(projectId: ID, limit: Int, offset: Int): [Workflow!]!
+  task(id: ID!): Task
+  tasks(projectId: ID, milestoneId: ID, assigneeId: ID, status: TaskStatus, limit: Int, offset: Int): [Task!]!
+
+  # ELN
+  notebook(id: ID!): Notebook
+  notebooks(limit: Int, offset: Int, search: String): [Notebook!]!
+  experiment(id: ID!): Experiment
+  experiments(notebookId: ID, projectId: ID, limit: Int, offset: Int, search: String): [Experiment!]!
+  experimentSection(id: ID!): ExperimentSection
+  protocol(id: ID!): Protocol
+  protocols(notebookId: ID, limit: Int, offset: Int, search: String): [Protocol!]!
+
+  # Inventory
+  sample(id: ID!): Sample
+  samples(limit: Int, offset: Int, search: String, storageId: ID): [Sample!]!
+  reagent(id: ID!): Reagent
+  reagents(limit: Int, offset: Int, search: String, storageId: ID): [Reagent!]!
+  material(id: ID!): Material
+  materials(limit: Int, offset: Int, search: String): [Material!]!
+  stockItem(id: ID!): StockItem
+  stockItems(sampleId: ID, reagentId: ID, materialId: ID, storageId: ID, limit: Int, offset: Int): [StockItem!]!
+  storage(id: ID!): Storage
+  storages(locationId: ID, storageType: StorageType, limit: Int, offset: Int): [Storage!]!
+  location(id: ID!): Location
+  locations(limit: Int, offset: Int): [Location!]!
+
+  # Equipment
+  equipment(id: ID!): Equipment
+  equipments(status: EquipmentStatus, locationId: ID, limit: Int, offset: Int, search: String): [Equipment!]!
+
+  # Procurement
+  order(id: ID!): Order
+  orders(status: OrderStatus, limit: Int, offset: Int): [Order!]!
+  invoice(id: ID!): Invoice
+  invoices(orderId: ID, limit: Int, offset: Int): [Invoice!]!
+}
+
+# ─── Mutation ─────────────────────────────────────────────────────────────────
+
+type Mutation {
+  # Projects
+  createProject(name: String!, description: String): Project!
+  updateProject(id: ID!, name: String, description: String, status: String): Project!
+  deleteProject(id: ID!): Boolean!
+
+  # Experiments
+  createExperiment(name: String!, notebookId: ID, projectId: ID, protocolId: ID, description: String): Experiment!
+  updateExperiment(id: ID!, name: String, description: String, hypothesis: String, conclusion: String): Experiment!
+  deleteExperiment(id: ID!): Boolean!
+
+  # Protocols
+  createProtocol(name: String!, description: String, notebookId: ID): Protocol!
+  updateProtocol(id: ID!, name: String, description: String): Protocol!
+  deleteProtocol(id: ID!): Boolean!
+
+  # Samples
+  createSample(name: String!, sampleType: String, storageId: ID, locationId: ID): Sample!
+  updateSample(id: ID!, name: String, description: String, storageId: ID, locationId: ID): Sample!
+  deleteSample(id: ID!): Boolean!
+
+  # Reagents
+  createReagent(name: String!, catalogNumber: String, supplier: String, storageId: ID): Reagent!
+  updateReagent(id: ID!, name: String, supplier: String, storageId: ID, expirationDate: DateTime): Reagent!
+  deleteReagent(id: ID!): Boolean!
+
+  # Stock Items
+  createStockItem(sampleId: ID, reagentId: ID, materialId: ID, quantity: Float!, unit: String, storageId: ID): StockItem!
+  updateStockItem(id: ID!, quantity: Float, storageId: ID, locationId: ID, expirationDate: DateTime): StockItem!
+  deleteStockItem(id: ID!): Boolean!
+
+  # Equipment
+  createEquipment(name: String!, equipmentType: String, locationId: ID): Equipment!
+  updateEquipment(id: ID!, name: String, status: EquipmentStatus, locationId: ID): Equipment!
+  deleteEquipment(id: ID!): Boolean!
+
+  # Orders
+  createOrder(supplier: String!, items: [OrderItemInput!]!): Order!
+  updateOrder(id: ID!, status: OrderStatus, notes: String): Order!
+  deleteOrder(id: ID!): Boolean!
+
+  # Tasks
+  createTask(title: String!, projectId: ID, milestoneId: ID, assigneeId: ID): Task!
+  updateTask(id: ID!, title: String, status: TaskStatus, assigneeId: ID, dueDate: DateTime): Task!
+  deleteTask(id: ID!): Boolean!
+
+  # Attachments
+  uploadAttachment(file: Upload!, description: String): Attachment!
+  deleteAttachment(id: ID!): Boolean!
+
+  # Collaboration
+  addCollaborator(resourceType: String!, resourceId: ID!, userId: ID!, role: PermissionRole!): CollaborationPermission!
+  updateCollaboratorRole(permissionId: ID!, role: PermissionRole!): CollaborationPermission!
+  removeCollaborator(permissionId: ID!): Boolean!
+}
+
+# ─── Input Types ──────────────────────────────────────────────────────────────
+
+input OrderItemInput {
+  name: String!
+  catalogNumber: String
+  quantity: Float!
+  unit: String
+  unitPrice: Float
+  materialId: ID
+  reagentId: ID
+}
