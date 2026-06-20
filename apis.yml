@@ -5,7 +5,7 @@ description: Labguru is an electronic laboratory notebook (ELN) and biotech data
   protocols, milestones, inventory, equipment, and research project data. The platform
   serves biotech, pharma, CRO, food tech, and academic organizations with cloud-based
   lab operations, LIMS, workflow automation, and data analytics capabilities.
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/labguru/refs/heads/main/apis.yml
 created: '2026-06-13'
 modified: '2026-06-13'
@@ -29,7 +29,7 @@ apis:
     all data in Labguru including experiments, projects, protocols, milestones, inventory,
     equipment, measurements, samples, and research data. Supports JSON responses,
     pagination, filtering, and both v1 and v2 endpoint versions.
-  image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   humanURL: https://www.labguru.com/developer-tools
   baseURL: https://my.labguru.com/api/v1
   tags:
