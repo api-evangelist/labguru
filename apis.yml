@@ -48,7 +48,7 @@ apis:
     url: https://raw.githubusercontent.com/api-evangelist/labguru/refs/heads/main/openapi/labguru-rest-api-v1.yaml
   - type: OpenAPI
     url: https://raw.githubusercontent.com/api-evangelist/labguru/refs/heads/main/openapi/labguru-rest-api-v2.yaml
-  - type: Changelog
+  - type: ChangeLog
     url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
   - type: Authentication
     url: https://help.labguru.com/en/articles/2946290-r-api-authentication
