@@ -65,6 +65,8 @@ apis:
     email: support@labguru.com
     url: https://www.labguru.com/support-center
 common:
+- type: DomainSecurity
+  url: security/labguru-domain-security.yml
 - type: Website
   url: https://www.labguru.com/
 - type: Documentation
