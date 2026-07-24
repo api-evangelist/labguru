@@ -1,0 +1,76 @@
+openapi: 3.0.0
+info:
+  title: Labguru Antibodies Tags API
+  description: "Labguru API is a JSON / REST based API, get started by reviewing the documentation below or code samples.<br>\n        Join our dedicated [Slack channel](https://join.slack.com/t/labgurus/shared_invite/zt-199glfagl-QZQ_bKl7vLAi8CQSuNrRug)\n        to be in direct contact with our API team and be informed about the latest updates.<br>\n        ***[API introduction and overview](https://help.labguru.com/en/articles/6149483-api-introduction-and-overview)***"
+  version: v1
+tags:
+- name: Tags
+paths:
+  /api/v1/tags:
+    post:
+      summary: Add tag
+      tags:
+      - Tags
+      parameters: []
+      responses:
+        '201':
+          description: tag created
+        '404':
+          description: invalid request - Item not found
+        '401':
+          description: 'Error: Unauthorized'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/createTag'
+        required: true
+  /api/v1/tags/{id}:
+    delete:
+      summary: Delete tag
+      tags:
+      - Tags
+      parameters:
+      - name: token
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        description: the item id to remove the tag from
+        schema:
+          type: integer
+      responses:
+        '201':
+          description: success
+        '404':
+          description: page not found
+components:
+  schemas:
+    createTag:
+      type: object
+      required:
+      - token
+      properties:
+        token:
+          type: string
+          example: YOUR TOKEN IS HERE
+        item:
+          type: object
+          required:
+          - tag
+          - class_name
+          - item_id
+          properties:
+            tag:
+              type: string
+              description: 'the tag name '
+            class_name:
+              type: string
+              description: the item type to tag
+              example: Biocollections::Antibody
+            item_id:
+              type: string
+              description: the id of the item to to tag
