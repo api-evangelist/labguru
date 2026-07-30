@@ -5,7 +5,19 @@ description: Labguru is an electronic laboratory notebook (ELN) and biotech data
   protocols, milestones, inventory, equipment, and research project data. The platform
   serves biotech, pharma, CRO, food tech, and academic organizations with cloud-based
   lab operations, LIMS, workflow automation, and data analytics capabilities.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: paid
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Paid
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/labguru.png
 url: https://raw.githubusercontent.com/api-evangelist/labguru/refs/heads/main/apis.yml
 created: '2026-06-13'
 modified: '2026-06-13'
@@ -23,31 +35,18 @@ tags:
 - REST API
 - GraphQL
 apis:
-- aid: labguru:labguru-rest-api
-  name: Labguru REST API
-  description: RESTful API providing create, read, update, and delete access to nearly
-    all data in Labguru including experiments, projects, protocols, milestones, inventory,
-    equipment, measurements, samples, and research data. Supports JSON responses,
-    pagination, filtering, and both v1 and v2 endpoint versions.
-  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+- aid: labguru:labguru-antibodies-api
+  name: Labguru Antibodies API
+  description: The Antibodies API from Labguru — 2 operation(s) for antibodies.
   humanURL: https://www.labguru.com/developer-tools
   baseURL: https://my.labguru.com/api/v1
   tags:
-  - Experiments
-  - Projects
-  - Protocols
-  - Inventory
-  - Equipment
-  - Samples
-  - Measurements
-  - REST
+  - Antibodies
   properties:
+  - type: OpenAPI
+    url: openapi/labguru-antibodies-api-openapi.yml
   - type: Documentation
     url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
-  - type: OpenAPI
-    url: https://raw.githubusercontent.com/api-evangelist/labguru/refs/heads/main/openapi/labguru-rest-api-v1.yaml
-  - type: OpenAPI
-    url: https://raw.githubusercontent.com/api-evangelist/labguru/refs/heads/main/openapi/labguru-rest-api-v2.yaml
   - type: ChangeLog
     url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
   - type: Authentication
@@ -58,12 +57,1641 @@ apis:
     url: https://github.com/BioData/LabguruPython
   - type: RSDK
     url: https://github.com/BioData/LabguruR
-  - url: graphql/labguru-graphql.md
-    type: GraphQL
-  contact:
-  - FN: Labguru Support
-    email: support@labguru.com
-    url: https://www.labguru.com/support-center
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-attachments-api
+  name: Labguru Attachments API
+  description: The Attachments API from Labguru — 2 operation(s) for attachments.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Attachments
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-attachments-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-authentication-api
+  name: Labguru Authentication API
+  description: The Authentication API from Labguru — 1 operation(s) for authentication.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Authentication
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-authentication-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-bacteria-api
+  name: Labguru Bacteria API
+  description: The Bacteria API from Labguru — 2 operation(s) for bacteria.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Bacteria
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-bacteria-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-boxes-api
+  name: Labguru Boxes API
+  description: The Boxes API from Labguru — 2 operation(s) for boxes.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Boxes
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-boxes-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-cell-lines-api
+  name: Labguru Cell lines API
+  description: The Cell lines API from Labguru — 2 operation(s) for cell lines.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Cell lines
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-cell-lines-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-comments-api
+  name: Labguru Comments API
+  description: The Comments API from Labguru — 2 operation(s) for comments.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Comments
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-comments-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-companies-api
+  name: Labguru Companies API
+  description: The Companies API from Labguru — 2 operation(s) for companies.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Companies
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-companies-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-compound-parent-structures-api
+  name: Labguru Compound Parent Structures API
+  description: >-
+    The Compound Parent Structures API from Labguru — 3 operation(s) for compound parent structures.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Compound Parent Structures
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-compound-parent-structures-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-compounds-api
+  name: Labguru Compounds API
+  description: The Compounds API from Labguru — 2 operation(s) for compounds.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Compounds
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-compounds-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-consumables-api
+  name: Labguru Consumables API
+  description: The Consumables API from Labguru — 2 operation(s) for consumables.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Consumables
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-consumables-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-datasets-api
+  name: Labguru Datasets API
+  description: The Datasets API from Labguru — 2 operation(s) for datasets.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Datasets
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-datasets-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-documents-api
+  name: Labguru Documents API
+  description: The Documents API from Labguru — 2 operation(s) for documents.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Documents
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-documents-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-elements-api
+  name: Labguru Elements API
+  description: The Elements API from Labguru — 3 operation(s) for elements.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Elements
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-elements-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-equipment-api
+  name: Labguru Equipment API
+  description: The Equipment API from Labguru — 3 operation(s) for equipment.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Equipment
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-equipment-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-events-api
+  name: Labguru Events API
+  description: The Events API from Labguru — 2 operation(s) for events.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Events
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-events-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-experiments-api
+  name: Labguru Experiments API
+  description: The Experiments API from Labguru — 6 operation(s) for experiments.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Experiments
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-experiments-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-filters-api
+  name: Labguru Filters API
+  description: The Filters API from Labguru — 3 operation(s) for filters.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Filters
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-filters-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-flags-api
+  name: Labguru Flags API
+  description: The Flags API from Labguru — 2 operation(s) for flags.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Flags
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-flags-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-flies-api
+  name: Labguru Flies API
+  description: The Flies API from Labguru — 2 operation(s) for flies.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Flies
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-flies-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-folders-api
+  name: Labguru Folders API
+  description: The Folders API from Labguru — 2 operation(s) for folders.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Folders
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-folders-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-fungi-api
+  name: Labguru Fungi API
+  description: The Fungi API from Labguru — 2 operation(s) for fungi.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Fungi
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-fungi-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-generic-items-api
+  name: Labguru Generic Items API
+  description: The Generic Items API from Labguru — 2 operation(s) for generic items.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Generic Items
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-generic-items-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-genes-api
+  name: Labguru Genes API
+  description: The Genes API from Labguru — 2 operation(s) for genes.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Genes
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-genes-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-links-api
+  name: Labguru Links API
+  description: The Links API from Labguru — 2 operation(s) for links.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Links
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-links-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-lipids-api
+  name: Labguru Lipids API
+  description: The Lipids API from Labguru — 2 operation(s) for lipids.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Lipids
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-lipids-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-maintenance-event-api
+  name: Labguru Maintenance event API
+  description: The Maintenance event API from Labguru — 2 operation(s) for maintenance event.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Maintenance event
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-maintenance-event-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-maintenance-template-api
+  name: Labguru Maintenance template API
+  description: The Maintenance template API from Labguru — 2 operation(s) for maintenance template.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Maintenance template
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-maintenance-template-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-maintenance-types-api
+  name: Labguru Maintenance types API
+  description: The Maintenance types API from Labguru — 2 operation(s) for maintenance types.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Maintenance types
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-maintenance-types-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-maintenances-api
+  name: Labguru Maintenances API
+  description: The Maintenances API from Labguru — 2 operation(s) for maintenances.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Maintenances
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-maintenances-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-manifest-api
+  name: Labguru Manifest API
+  description: The Manifest API from Labguru — 1 operation(s) for manifest.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Manifest
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-manifest-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-measurements-api
+  name: Labguru Measurements API
+  description: The Measurements API from Labguru — 1 operation(s) for measurements.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Measurements
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-measurements-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-members-api
+  name: Labguru Members API
+  description: The Members API from Labguru — 1 operation(s) for members.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Members
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-members-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-notes-api
+  name: Labguru Notes API
+  description: The Notes API from Labguru — 2 operation(s) for notes.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Notes
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-notes-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-papers-api
+  name: Labguru Papers API
+  description: The Papers API from Labguru — 2 operation(s) for papers.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Papers
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-papers-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-plants-api
+  name: Labguru Plants API
+  description: The Plants API from Labguru — 2 operation(s) for plants.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Plants
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-plants-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-plasmids-api
+  name: Labguru Plasmids API
+  description: The Plasmids API from Labguru — 2 operation(s) for plasmids.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Plasmids
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-plasmids-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-plates-api
+  name: Labguru Plates API
+  description: The Plates API from Labguru — 4 operation(s) for plates.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Plates
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-plates-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-primers-api
+  name: Labguru Primers API
+  description: The Primers API from Labguru — 2 operation(s) for primers.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Primers
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-primers-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-projects-api
+  name: Labguru Projects API
+  description: The Projects API from Labguru — 2 operation(s) for projects.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Projects
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-projects-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-proteins-api
+  name: Labguru Proteins API
+  description: The Proteins API from Labguru — 2 operation(s) for proteins.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Proteins
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-proteins-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-protocols-api
+  name: Labguru Protocols API
+  description: The Protocols API from Labguru — 2 operation(s) for protocols.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Protocols
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-protocols-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-reports-api
+  name: Labguru Reports API
+  description: The Reports API from Labguru — 5 operation(s) for reports.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Reports
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-reports-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-request-templates-api
+  name: Labguru Request templates API
+  description: The Request templates API from Labguru — 2 operation(s) for request templates.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Request templates
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-request-templates-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-requests-api
+  name: Labguru Requests API
+  description: The Requests API from Labguru — 9 operation(s) for requests.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Requests
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-requests-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-rodent-cages-api
+  name: Labguru Rodent cages API
+  description: The Rodent cages API from Labguru — 3 operation(s) for rodent cages.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Rodent cages
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-rodent-cages-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-rodent-specimens-api
+  name: Labguru Rodent Specimens API
+  description: The Rodent Specimens API from Labguru — 2 operation(s) for rodent specimens.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Rodent Specimens
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-rodent-specimens-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-rodent-strains-api
+  name: Labguru Rodent Strains API
+  description: The Rodent Strains API from Labguru — 2 operation(s) for rodent strains.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Rodent Strains
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-rodent-strains-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-sample-pooling-api
+  name: Labguru Sample Pooling API
+  description: The Sample Pooling API from Labguru — 1 operation(s) for sample pooling.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Sample Pooling
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-sample-pooling-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-search-api
+  name: Labguru Search API
+  description: The Search API from Labguru — 1 operation(s) for search.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Search
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-search-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-sections-api
+  name: Labguru Sections API
+  description: The Sections API from Labguru — 3 operation(s) for sections.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Sections
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-sections-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-seeds-api
+  name: Labguru Seeds API
+  description: The Seeds API from Labguru — 2 operation(s) for seeds.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Seeds
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-seeds-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-sequences-api
+  name: Labguru Sequences API
+  description: The Sequences API from Labguru — 2 operation(s) for sequences.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Sequences
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-sequences-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-shopping-list-api
+  name: Labguru Shopping list API
+  description: The Shopping list API from Labguru — 6 operation(s) for shopping list.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Shopping list
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-shopping-list-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-sops-api
+  name: Labguru SOPs API
+  description: The SOPs API from Labguru — 2 operation(s) for sops.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - SOPs
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-sops-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-stocks-api
+  name: Labguru Stocks API
+  description: The Stocks API from Labguru — 7 operation(s) for stocks.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Stocks
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-stocks-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-storages-api
+  name: Labguru Storages API
+  description: The Storages API from Labguru — 2 operation(s) for storages.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Storages
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-storages-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-submodules-api
+  name: Labguru Submodules API
+  description: The Submodules API from Labguru — 7 operation(s) for submodules.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Submodules
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-submodules-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-tags-api
+  name: Labguru Tags API
+  description: The Tags API from Labguru — 2 operation(s) for tags.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Tags
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-tags-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-teams-api
+  name: Labguru Teams API
+  description: The Teams API from Labguru — 2 operation(s) for teams.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Teams
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-teams-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-tissue-api
+  name: Labguru Tissue API
+  description: The Tissue API from Labguru — 2 operation(s) for tissue.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Tissue
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-tissue-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-units-api
+  name: Labguru Units API
+  description: The Units API from Labguru — 2 operation(s) for units.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Units
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-units-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-vectors-api
+  name: Labguru Vectors API
+  description: The Vectors API from Labguru — 2 operation(s) for vectors.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Vectors
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-vectors-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-viruses-api
+  name: Labguru Viruses API
+  description: The Viruses API from Labguru — 2 operation(s) for viruses.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Viruses
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-viruses-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-visualizations-api
+  name: Labguru Visualizations API
+  description: The Visualizations API from Labguru — 2 operation(s) for visualizations.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Visualizations
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-visualizations-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-webhooks-api
+  name: Labguru Webhooks API
+  description: The Webhooks API from Labguru — 3 operation(s) for webhooks.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Webhooks
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-webhooks-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-workflows-api
+  name: Labguru Workflows API
+  description: The Workflows API from Labguru — 2 operation(s) for workflows.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Workflows
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-workflows-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-worms-api
+  name: Labguru Worms API
+  description: The Worms API from Labguru — 2 operation(s) for worms.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Worms
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-worms-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
+- aid: labguru:labguru-yeasts-api
+  name: Labguru Yeasts API
+  description: The Yeasts API from Labguru — 2 operation(s) for yeasts.
+  humanURL: https://www.labguru.com/developer-tools
+  baseURL: https://my.labguru.com/api/v1
+  tags:
+  - Yeasts
+  properties:
+  - type: OpenAPI
+    url: openapi/labguru-yeasts-api-openapi.yml
+  - type: Documentation
+    url: https://help.labguru.com/en/articles/6149483-api-introduction-and-overview
+  - type: ChangeLog
+    url: https://help.labguru.com/en/articles/9571977-api-docs-change-log
+  - type: Authentication
+    url: https://help.labguru.com/en/articles/2946290-r-api-authentication
+  - type: GitHubRepository
+    url: https://github.com/BioData/labguru-api-examples
+  - type: PythonSDK
+    url: https://github.com/BioData/LabguruPython
+  - type: RSDK
+    url: https://github.com/BioData/LabguruR
+  - type: GraphQL
+    url: graphql/labguru-graphql.md
 common:
 - type: AgenticAccess
   url: agentic-access/labguru-agentic-access.yml
