@@ -1,0 +1,631 @@
+{
+  "item": [
+    {
+      "id": "bcd724dd-f69d-43ff-8d4e-d9cd95daf273",
+      "name": "Attachments",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "2bc00cc8-7fe8-4646-8e35-b8fe62e436b1",
+          "name": "Upload file attachment",
+          "request": {
+            "name": "Upload file attachment",
+            "description": {
+              "content": "This endpoint is used for uploading file attachments to various entities.\n\n\nFor a detailed guide on uploading files to sections within ELN & Knowledgebase entities, including a step-by-step process and practical examples in **Python**, refer to our article on: [Uploading Files to Experiments via API](https://help.labguru.com/en/articles/9636468-uploading-files-to-experiments-via-api)\n\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "attachments"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "multipart/form-data"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "token",
+                  "value": "<string>",
+                  "type": "text",
+                  "description": "(Required) "
+                },
+                {
+                  "key": "item[attachment]",
+                  "type": "file",
+                  "description": "(Required) The file that will be uploaded."
+                },
+                {
+                  "key": "item[title]",
+                  "value": "<string>",
+                  "type": "text",
+                  "description": "(Required) The title of the attachment. <b>This should match the file name exactly, including the file extension (.xlsx, .csv, etc.)</b>."
+                },
+                {
+                  "key": "item[attach_to_uuid]",
+                  "value": "<string>",
+                  "type": "text",
+                  "description": "The UUID of the object to which the attachment will be linked.<br>\n                If this parameter is not provided, the uploaded file will be stored but not associated with any specific entity (unattached file)."
+                },
+                {
+                  "key": "item[description]",
+                  "value": "<string>",
+                  "type": "text",
+                  "description": "A brief description of the attachment content."
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "de22abce-a6f5-4e58-b37f-93a5dd1955b9",
+              "name": "Created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "attachments"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "token",
+                      "value": "<string>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "(Required) The file that will be uploaded.",
+                        "type": "text/plain"
+                      },
+                      "key": "item[attachment]",
+                      "value": "<binary>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "(Required) The title of the attachment. <b>This should match the file name exactly, including the file extension (.xlsx, .csv, etc.)</b>.",
+                        "type": "text/plain"
+                      },
+                      "key": "item[title]",
+                      "value": "Project_report.pdf",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "The UUID of the object to which the attachment will be linked.<br>\n                If this parameter is not provided, the uploaded file will be stored but not associated with any specific entity (unattached file).",
+                        "type": "text/plain"
+                      },
+                      "key": "item[attach_to_uuid]",
+                      "value": "<string>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "A brief description of the attachment content.",
+                        "type": "text/plain"
+                      },
+                      "key": "item[description]",
+                      "value": "Detailed project report",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "d2330f4b-8ffc-4748-af81-5531c05d2588",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "attachments"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "token",
+                      "value": "<string>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "(Required) The file that will be uploaded.",
+                        "type": "text/plain"
+                      },
+                      "key": "item[attachment]",
+                      "value": "<binary>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "(Required) The title of the attachment. <b>This should match the file name exactly, including the file extension (.xlsx, .csv, etc.)</b>.",
+                        "type": "text/plain"
+                      },
+                      "key": "item[title]",
+                      "value": "Project_report.pdf",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "The UUID of the object to which the attachment will be linked.<br>\n                If this parameter is not provided, the uploaded file will be stored but not associated with any specific entity (unattached file).",
+                        "type": "text/plain"
+                      },
+                      "key": "item[attach_to_uuid]",
+                      "value": "<string>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "A brief description of the attachment content.",
+                        "type": "text/plain"
+                      },
+                      "key": "item[description]",
+                      "value": "Detailed project report",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "4ee06dbe-cf69-4e2e-90af-09b24074d0bd",
+              "name": "Internal Server Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "attachments"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "token",
+                      "value": "<string>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "(Required) The file that will be uploaded.",
+                        "type": "text/plain"
+                      },
+                      "key": "item[attachment]",
+                      "value": "<binary>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "(Required) The title of the attachment. <b>This should match the file name exactly, including the file extension (.xlsx, .csv, etc.)</b>.",
+                        "type": "text/plain"
+                      },
+                      "key": "item[title]",
+                      "value": "Project_report.pdf",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "The UUID of the object to which the attachment will be linked.<br>\n                If this parameter is not provided, the uploaded file will be stored but not associated with any specific entity (unattached file).",
+                        "type": "text/plain"
+                      },
+                      "key": "item[attach_to_uuid]",
+                      "value": "<string>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "A brief description of the attachment content.",
+                        "type": "text/plain"
+                      },
+                      "key": "item[description]",
+                      "value": "Detailed project report",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "096642f7-5d0d-4b13-a756-01b23c089201",
+          "name": "Link an attachment to an attachment element",
+          "request": {
+            "name": "Link an attachment to an attachment element",
+            "description": {
+              "content": "This endpoint links an existing attachment with a specified attachment element by their IDs.\n\n**Important Note:**\n\nAn attachment can only be linked with an attachment element on the same page (such as an experiment, protocol, report, or document) where it was initially uploaded.\n\nBefore linking the attachment, ensure that the target section and attachment element are already in place; if not, create them beforehand.\n\nTo do this, use the \"Add a section\" and \"Add element\" requests. For further instructions, refer to our article on [Uploading Files to Experiments via API](https://help.labguru.com/en/articles/9636468-uploading-files-to-experiments-via-api) .\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "attachments",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "id",
+                  "description": "(Required) The ID of the attachment to be linked with the attachment element"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"token\": \"<string>\",\n  \"item\": {\n    \"element_id\": \"<integer>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "c06f1001-ccb4-4036-95a7-3193731f3c10",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "attachments",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) The ID of the attachment to be linked with the attachment element"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"token\": \"YOUR TOKEN IS HERE\",\n  \"item\": {\n    \"element_id\": \"<integer>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "b3c3d4d1-e7d2-419e-9468-51bf99c22657",
+              "name": "Not Found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "attachments",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) The ID of the attachment to be linked with the attachment element"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"token\": \"YOUR TOKEN IS HERE\",\n  \"item\": {\n    \"element_id\": \"<integer>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ee9c7170-9d05-4683-91e1-18ee7504cc8c",
+          "name": "Get an attachment by id",
+          "request": {
+            "name": "Get an attachment by id",
+            "description": {
+              "content": "Get an attachment by ID.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "attachments",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "token",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "id",
+                  "description": "(Required) The ID of the attachment "
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7f8891ed-6ee9-4a64-9d56-ade4e76e6b46",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "attachments",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "token",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) The ID of the attachment "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "ed8093e4-f056-4b00-bbfa-ff1b91a251ce",
+              "name": "Not Found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "attachments",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "token",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) The ID of the attachment "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "d818aa47-5f41-40d1-9602-d6dfad1e9efe",
+    "name": "Labguru Antibodies Attachments API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Labguru API is a JSON / REST based API, get started by reviewing the documentation below or code samples.<br>\n        Join our dedicated [Slack channel](https://join.slack.com/t/labgurus/shared_invite/zt-199glfagl-QZQ_bKl7vLAi8CQSuNrRug)\n        to be in direct contact with our API team and be informed about the latest updates.<br>\n        ***[API introduction and overview](https://help.labguru.com/en/articles/6149483-api-introduction-and-overview)***",
+      "type": "text/plain"
+    }
+  }
+}
