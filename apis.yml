@@ -5,6 +5,18 @@ description: Labguru is an electronic laboratory notebook (ELN) and biotech data
   protocols, milestones, inventory, equipment, and research project data. The platform
   serves biotech, pharma, CRO, food tech, and academic organizations with cloud-based
   lab operations, LIMS, workflow automation, and data analytics capabilities.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: paid
   onboarding: unknown
@@ -1703,6 +1715,9 @@ apis:
   - type: GraphQL
     url: graphql/labguru-graphql.md
 common:
+- type: CapabilityMap
+  url: capabilities/labguru-capability-edges.yml
+  name: Labguru Business Capability Map
 - type: AgenticAccess
   url: agentic-access/labguru-agentic-access.yml
 - type: DomainSecurity
