@@ -776,7 +776,7 @@ apis:
   humanURL: https://www.labguru.com/developer-tools
   baseURL: https://my.labguru.com/api/v1
   tags:
-  - Manifest
+  - Manifests
   tags_raw:
   - Manifest
   properties:
