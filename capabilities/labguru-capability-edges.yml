@@ -1,0 +1,36 @@
+slug: labguru
+provider: Labguru
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Transportation & Logistics
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 2
+edges:
+- tag: Experiments
+  spec_file: labguru-experiments-api-openapi.yml
+  capability_id: BC-810.30
+  capability_id_l1: BC-810
+  capability_name: Experimentation & Prototyping Management
+  confidence: 0.8
+  evidence: POST /api/v1/experiments  "Add an experiment"; GET /api/v1/experiments/{id}/elements "List
+    all elements of an experiment" on an electronic laboratory notebook (ELN)
+  reason: Operations create, update and list laboratory experiments and their content elements in an ELN,
+    which is the lab-work/experimentation record-keeping described by Experimentation & Prototyping Management.
+- tag: Shopping list
+  spec_file: labguru-shopping-list-api-openapi.yml
+  capability_id: BC-500.40
+  capability_id_l1: BC-500
+  capability_name: Procure-to-Pay Operations Management
+  confidence: 0.7
+  evidence: PUT /api/v1/shopping_list/{id}/submit  Submit order; PUT /api/v1/shopping_list/{id}/approve  Approve
+    order; POST /api/v1/shopping_list/add_item  Add item
+  reason: The operations implement a requisition-to-order flow — add item to a shopping list, submit,
+    approve, cancel — which is day-to-day procure-to-pay/requisitioning rather than a lab-specific concept.
+    Confidence moderated because it could equally be read as purchase order management.
