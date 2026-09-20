@@ -11,8 +11,29 @@ capability_model:
   attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
     CC BY 4.0
   notice: NOTICE
-edge_count: 2
+edge_count: 7
 edges:
+- tag: Webhooks
+  spec_file: labguru-webhooks-api-openapi.yml
+  capability_id: BC-4270.80
+  capability_id_l1: BC-4270
+  capability_name: Webhook & Event Subscription Management
+  confidence: 0.82
+  evidence: POST /api/v1/webhooks  Create a new webhook subscription; PUT /api/v1/webhooks/{id}  Update
+    webhook attributes
+  reason: The operations manage the lifecycle of outbound event subscriptions exposed to API consumers,
+    which is exactly Webhook & Event Subscription Management within the vendor's developer platform surface.
+  recovered_from: sweep-20260828T235257Z-edges.json
+- tag: Compounds
+  spec_file: labguru-compounds-api-openapi.yml
+  capability_id: BC-1500.60
+  capability_id_l1: BC-1500
+  capability_name: Compound & Library Management
+  confidence: 0.8
+  evidence: POST /api/v1/compounds  Creates a compound
+  reason: CRUD over chemical compound records in a biotech/pharma lab data platform corresponds to compound
+    and library/repository management in drug discovery.
+  recovered_from: vertical-pharmaceuticals-life-sciences-edges.json
 - tag: Experiments
   spec_file: labguru-experiments-api-openapi.yml
   capability_id: BC-810.30
@@ -23,6 +44,42 @@ edges:
     all elements of an experiment" on an electronic laboratory notebook (ELN)
   reason: Operations create, update and list laboratory experiments and their content elements in an ELN,
     which is the lab-work/experimentation record-keeping described by Experimentation & Prototyping Management.
+- tag: Maintenances
+  spec_file: labguru-maintenances-api-openapi.yml
+  capability_id: BC-1040
+  capability_id_l1: BC-1040
+  capability_name: Physical Asset Management
+  confidence: 0.78
+  evidence: POST /api/v1/maintenances "Add maintenance to equipment"; PUT /api/v1/maintenances/{id} "Update
+    maintenance of equipment"
+  reason: Operations explicitly attach and update maintenance against equipment, which is lifecycle management
+    of physical lab equipment. Mapped to Physical Asset Management at L1; none of the offered L2s names
+    maintenance execution.
+  recovered_from: vertical-pharmaceuticals-life-sciences-edges.json
+- tag: Compound Parent Structures
+  spec_file: labguru-compound-parent-structures-api-openapi.yml
+  capability_id: BC-1500.60
+  capability_id_l1: BC-1500
+  capability_name: Compound & Library Management
+  confidence: 0.75
+  evidence: GET /api/v2/compound_parent_structures/{id}/compounds  List compounds for a compound parent
+    structure
+  reason: Chemical compound registration hierarchy (parent structure to child compounds) is compound/registry
+    library management within discovery research; the parent-structure-to-compound relationship is characteristic
+    of a compound registration system.
+  recovered_from: vertical-pharmaceuticals-life-sciences-edges.json
+- tag: Maintenance event
+  spec_file: labguru-maintenance-event-api-openapi.yml
+  capability_id: BC-1040
+  capability_id_l1: BC-1040
+  capability_name: Physical Asset Management
+  confidence: 0.7
+  evidence: POST /api/v1/maintenance_events "Creates a Maintenance event"; "List all maintenance events
+    in your account"
+  reason: Maintenance events on lab equipment are equipment lifecycle/upkeep records, which falls under
+    Physical Asset Management. No listed L2 covers maintenance execution specifically, so only the L1
+    is asserted.
+  recovered_from: vertical-pharmaceuticals-life-sciences-edges.json
 - tag: Shopping list
   spec_file: labguru-shopping-list-api-openapi.yml
   capability_id: BC-500.40
