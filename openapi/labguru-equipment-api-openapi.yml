@@ -1,8 +1,8 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  title: Labguru Antibodies Equipment API
-  description: "Labguru API is a JSON / REST based API, get started by reviewing the documentation below or code samples.<br>\n        Join our dedicated [Slack channel](https://join.slack.com/t/labgurus/shared_invite/zt-199glfagl-QZQ_bKl7vLAi8CQSuNrRug)\n        to be in direct contact with our API team and be informed about the latest updates.<br>\n        ***[API introduction and overview](https://help.labguru.com/en/articles/6149483-api-introduction-and-overview)***"
-  version: v1
+  title: Labguru Equipment API
+  version: '1.0'
+  description: 'Operations tagged Equipment across 2 of this provider''s published API definitions: labguru-rest-api-v1.yaml, labguru-rest-api-v2.yaml. Each path carries the servers of the definition it was published in.'
 tags:
 - name: Equipment
 paths:
@@ -25,12 +25,19 @@ paths:
             schema:
               $ref: '#/components/schemas/createEquipment'
         required: true
+      operationId: postApiV1Instruments
+      x-operation-id-source: derived
     get:
       summary: List all equipment in your account
       tags:
       - Equipment
       deprecated: true
-      description: "List all equipment.\n\n**Note:** An improved version of this endpoint is available in API v2.\n Please visit [API v2 docs](/api-docs/index.html?urls.primaryName=API%20V2%20Docs#/Equipment/get_api_v2_instruments).\n"
+      description: 'List all equipment.
+
+
+        **Note:** An improved version of this endpoint is available in API v2.
+
+        Please visit API v2 docs.'
       parameters:
       - name: token
         in: query
@@ -52,6 +59,8 @@ paths:
           description: success
         '404':
           description: page not found
+      operationId: getApiV1Instruments
+      x-operation-id-source: derived
   /api/v1/instruments/{id}:
     put:
       summary: Update equipment attributes
@@ -77,6 +86,8 @@ paths:
             schema:
               $ref: '#/components/schemas/updateEquipment'
         required: true
+      operationId: putApiV1InstrumentsById
+      x-operation-id-source: derived
     get:
       summary: Get equipment by id
       tags:
@@ -98,14 +109,14 @@ paths:
           description: success
         '404':
           description: equipment not found
+      operationId: getApiV1InstrumentsById
+      x-operation-id-source: derived
   /api/v2/instruments:
     get:
       summary: List all equipment in your account
       tags:
       - Equipment
-      description: 'List all equipment.
-
-        '
+      description: List all equipment.
       parameters:
       - name: token
         in: query
@@ -135,8 +146,13 @@ paths:
                   message:
                     type: string
                     example: You are not authorized to perform this action.
+      operationId: getApiV2Instruments
+      x-operation-id-source: derived
 components:
   schemas:
+    updateEquipment:
+      allOf:
+      - $ref: '#/components/schemas/EquipmentBaseRequest'
     createEquipment:
       allOf:
       - $ref: '#/components/schemas/EquipmentBaseRequest'
@@ -186,6 +202,6 @@ components:
             description:
               type: string
               description: 'general description '
-    updateEquipment:
-      allOf:
-      - $ref: '#/components/schemas/EquipmentBaseRequest'
+x-refined-from:
+- labguru-rest-api-v1.yaml
+- labguru-rest-api-v2.yaml
