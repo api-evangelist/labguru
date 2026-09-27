@@ -114,18 +114,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    updateBox:
-      allOf:
-      - $ref: '#/components/schemas/BoxBaseRequest'
-    createBox:
-      allOf:
-      - $ref: '#/components/schemas/BoxBaseRequest'
-      - type: object
-        properties:
-          item:
-            type: object
-            required:
-            - name
     BoxBaseRequest:
       type: object
       required:
@@ -159,3 +147,15 @@ components:
             barcode:
               type: string
               description: the barcode of the box
+    updateBox:
+      allOf:
+      - $ref: '#/components/schemas/BoxBaseRequest'
+    createBox:
+      allOf:
+      - $ref: '#/components/schemas/BoxBaseRequest'
+      - type: object
+        properties:
+          item:
+            type: object
+            required:
+            - name

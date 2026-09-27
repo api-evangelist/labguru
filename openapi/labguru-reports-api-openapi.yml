@@ -226,50 +226,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    createReport:
-      allOf:
-      - $ref: '#/components/schemas/ReportBaseRequest'
-      - type: object
-        properties:
-          item:
-            type: object
-            required:
-            - title
-    addAnExperimentSectionToReport:
-      type: object
-      required:
-      - token
-      properties:
-        token:
-          type: string
-          example: YOUR TOKEN IS HERE
-        item:
-          type: object
-          required:
-          - report_id
-          - section_id
-          properties:
-            report_id:
-              type: integer
-              description: the report id
-            section_id:
-              type: string
-              description: the experiment procedure id to copy
-              example: '32'
-    ReportBaseRequest:
-      type: object
-      required:
-      - token
-      properties:
-        token:
-          type: string
-          example: YOUR TOKEN IS HERE
-        item:
-          type: object
-          properties:
-            title:
-              type: string
-              description: 'the report title '
     addCoverToReport:
       type: object
       required:
@@ -291,21 +247,65 @@ components:
               type: string
               description: cover page data in HTML format
               example: <h1>Cover Page Heading</h1>
+    addAnExperimentSectionToReport:
+      type: object
+      required:
+      - token
+      properties:
+        token:
+          type: string
+          example: YOUR TOKEN IS HERE
+        item:
+          type: object
+          required:
+          - report_id
+          - section_id
+          properties:
+            report_id:
+              type: integer
+              description: the report id
+            section_id:
+              type: string
+              description: the experiment procedure id to copy
+              example: '32'
+    createReport:
+      allOf:
+      - $ref: '#/components/schemas/ReportBaseRequest'
+      - type: object
+        properties:
+          item:
+            type: object
+            required:
+            - title
+    ReportBaseRequest:
+      type: object
+      required:
+      - token
+      properties:
+        token:
+          type: string
+          example: YOUR TOKEN IS HERE
+        item:
+          type: object
+          properties:
+            title:
+              type: string
+              description: 'the report title '
     updateReport:
       allOf:
       - $ref: '#/components/schemas/ReportBaseRequest'
-    NotFound:
-      type: object
-      properties:
-        error:
-          type: string
-          example: Resource not found
     Unauthorized:
       type: object
       properties:
         message:
           type: string
           example: You are not authorized to perform this action
+    NotFound:
+      type: object
+      properties:
+        error:
+          type: string
+          example: Resource not found
 x-refined-from:
 - labguru-rest-api-v1.yaml
 - labguru-rest-api-v2.yaml

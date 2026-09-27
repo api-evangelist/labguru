@@ -114,9 +114,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    updateDocument:
-      allOf:
-      - $ref: '#/components/schemas/DocumentBaseRequest'
     DocumentBaseRequest:
       type: object
       required:
@@ -143,3 +140,6 @@ components:
             type: object
             required:
             - title
+    updateDocument:
+      allOf:
+      - $ref: '#/components/schemas/DocumentBaseRequest'

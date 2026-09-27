@@ -235,6 +235,50 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    addCustomItem:
+      title: Add custom item
+      type: object
+      required:
+      - token
+      properties:
+        token:
+          type: string
+          example: YOUR TOKEN IS HERE
+        item:
+          type: object
+          required:
+          - collection_type
+          - collection_id
+          - item_id
+          - quantity
+          properties:
+            collection_type:
+              type: string
+              description: The name of the custom collection to which the item belongs.
+            collection_id:
+              type: integer
+              description: The id of the custom collection within the system.
+            item_id:
+              type: integer
+              description: The id of the item to be added to the shopping list
+            price:
+              type: number
+              format: float
+              description: The price of the item
+            currency:
+              type: integer
+            quantity:
+              type: integer
+              description: The number of units of the item to be added to the shopping list.
+            remarks:
+              type: string
+              description: Additional comments or special instructions related to the item.
+    Unauthorized:
+      type: object
+      properties:
+        message:
+          type: string
+          example: You are not authorized to perform this action
     updateOrder:
       type: object
       required:
@@ -299,47 +343,3 @@ components:
             remarks:
               type: string
               description: Additional comments or special instructions related to the item.
-    addCustomItem:
-      title: Add custom item
-      type: object
-      required:
-      - token
-      properties:
-        token:
-          type: string
-          example: YOUR TOKEN IS HERE
-        item:
-          type: object
-          required:
-          - collection_type
-          - collection_id
-          - item_id
-          - quantity
-          properties:
-            collection_type:
-              type: string
-              description: The name of the custom collection to which the item belongs.
-            collection_id:
-              type: integer
-              description: The id of the custom collection within the system.
-            item_id:
-              type: integer
-              description: The id of the item to be added to the shopping list
-            price:
-              type: number
-              format: float
-              description: The price of the item
-            currency:
-              type: integer
-            quantity:
-              type: integer
-              description: The number of units of the item to be added to the shopping list.
-            remarks:
-              type: string
-              description: Additional comments or special instructions related to the item.
-    Unauthorized:
-      type: object
-      properties:
-        message:
-          type: string
-          example: You are not authorized to perform this action

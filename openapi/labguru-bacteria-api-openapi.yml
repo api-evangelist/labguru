@@ -118,6 +118,15 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    createBacterium:
+      allOf:
+      - $ref: '#/components/schemas/BacteriumBaseRequest'
+      - type: object
+        properties:
+          item:
+            type: object
+            required:
+            - name
     updateBacterium:
       allOf:
       - $ref: '#/components/schemas/BacteriumBaseRequest'
@@ -150,12 +159,3 @@ components:
             description:
               type: string
               description: A detailed description of the bacterium
-    createBacterium:
-      allOf:
-      - $ref: '#/components/schemas/BacteriumBaseRequest'
-      - type: object
-        properties:
-          item:
-            type: object
-            required:
-            - name

@@ -118,15 +118,9 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    createTissue:
+    updateTissue:
       allOf:
       - $ref: '#/components/schemas/TissueBaseRequest'
-      - type: object
-        properties:
-          item:
-            type: object
-            required:
-            - name
     TissueBaseRequest:
       type: object
       required:
@@ -178,6 +172,12 @@ components:
             description:
               type: string
               description: Description of the tissue
-    updateTissue:
+    createTissue:
       allOf:
       - $ref: '#/components/schemas/TissueBaseRequest'
+      - type: object
+        properties:
+          item:
+            type: object
+            required:
+            - name

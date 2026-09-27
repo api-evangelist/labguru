@@ -153,15 +153,6 @@ components:
     updateEquipment:
       allOf:
       - $ref: '#/components/schemas/EquipmentBaseRequest'
-    createEquipment:
-      allOf:
-      - $ref: '#/components/schemas/EquipmentBaseRequest'
-      - type: object
-        properties:
-          item:
-            type: object
-            required:
-            - name
     EquipmentBaseRequest:
       type: object
       required:
@@ -202,6 +193,15 @@ components:
             description:
               type: string
               description: 'general description '
+    createEquipment:
+      allOf:
+      - $ref: '#/components/schemas/EquipmentBaseRequest'
+      - type: object
+        properties:
+          item:
+            type: object
+            required:
+            - name
 x-refined-from:
 - labguru-rest-api-v1.yaml
 - labguru-rest-api-v2.yaml

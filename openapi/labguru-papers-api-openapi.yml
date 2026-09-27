@@ -110,6 +110,15 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    createPaper:
+      allOf:
+      - $ref: '#/components/schemas/PaperBaseRequest'
+      - type: object
+        properties:
+          item:
+            type: object
+            required:
+            - name
     updatePaper:
       allOf:
       - $ref: '#/components/schemas/PaperBaseRequest'
@@ -153,12 +162,3 @@ components:
             review:
               type: string
               description: Abstract
-    createPaper:
-      allOf:
-      - $ref: '#/components/schemas/PaperBaseRequest'
-      - type: object
-        properties:
-          item:
-            type: object
-            required:
-            - name

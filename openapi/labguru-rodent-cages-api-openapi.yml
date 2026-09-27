@@ -173,9 +173,24 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    Unauthorized:
+      type: object
+      properties:
+        message:
+          type: string
+          example: You are not authorized to perform this action
     updateRodentCage:
       allOf:
       - $ref: '#/components/schemas/RodentCageBaseRequest'
+    createRodentCage:
+      allOf:
+      - $ref: '#/components/schemas/RodentCageBaseRequest'
+      - type: object
+        properties:
+          item:
+            type: object
+            required:
+            - name
     RodentCageBaseRequest:
       type: object
       required:
@@ -202,21 +217,6 @@ components:
             owner_id:
               type: integer
               description: id of the owner - by default it's your member id
-    Unauthorized:
-      type: object
-      properties:
-        message:
-          type: string
-          example: You are not authorized to perform this action
-    createRodentCage:
-      allOf:
-      - $ref: '#/components/schemas/RodentCageBaseRequest'
-      - type: object
-        properties:
-          item:
-            type: object
-            required:
-            - name
 x-refined-from:
 - labguru-rest-api-v1.yaml
 - labguru-rest-api-v2.yaml
