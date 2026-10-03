@@ -121,6 +121,16 @@ components:
     updateSequence:
       allOf:
       - $ref: '#/components/schemas/SequenceBaseRequest'
+    createSequence:
+      allOf:
+      - $ref: '#/components/schemas/SequenceBaseRequest'
+      - type: object
+        properties:
+          item:
+            type: object
+            required:
+            - title
+            - seq
     SequenceBaseRequest:
       type: object
       required:
@@ -154,13 +164,3 @@ components:
             description:
               type: string
               description: Description of the sequence
-    createSequence:
-      allOf:
-      - $ref: '#/components/schemas/SequenceBaseRequest'
-      - type: object
-        properties:
-          item:
-            type: object
-            required:
-            - title
-            - seq

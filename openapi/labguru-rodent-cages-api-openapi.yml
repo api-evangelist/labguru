@@ -179,9 +179,6 @@ components:
         message:
           type: string
           example: You are not authorized to perform this action
-    updateRodentCage:
-      allOf:
-      - $ref: '#/components/schemas/RodentCageBaseRequest'
     createRodentCage:
       allOf:
       - $ref: '#/components/schemas/RodentCageBaseRequest'
@@ -217,6 +214,9 @@ components:
             owner_id:
               type: integer
               description: id of the owner - by default it's your member id
+    updateRodentCage:
+      allOf:
+      - $ref: '#/components/schemas/RodentCageBaseRequest'
 x-refined-from:
 - labguru-rest-api-v1.yaml
 - labguru-rest-api-v2.yaml

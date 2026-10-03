@@ -114,18 +114,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    updateCompany:
-      allOf:
-      - $ref: '#/components/schemas/CompanyBaseRequest'
-    createCompany:
-      allOf:
-      - $ref: '#/components/schemas/CompanyBaseRequest'
-      - type: object
-        properties:
-          item:
-            type: object
-            required:
-            - name
     CompanyBaseRequest:
       type: object
       required:
@@ -158,3 +146,15 @@ components:
             description:
               type: string
               description: 'general description '
+    updateCompany:
+      allOf:
+      - $ref: '#/components/schemas/CompanyBaseRequest'
+    createCompany:
+      allOf:
+      - $ref: '#/components/schemas/CompanyBaseRequest'
+      - type: object
+        properties:
+          item:
+            type: object
+            required:
+            - name

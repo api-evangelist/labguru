@@ -268,6 +268,9 @@ components:
               type: string
               description: the experiment procedure id to copy
               example: '32'
+    updateReport:
+      allOf:
+      - $ref: '#/components/schemas/ReportBaseRequest'
     createReport:
       allOf:
       - $ref: '#/components/schemas/ReportBaseRequest'
@@ -291,9 +294,6 @@ components:
             title:
               type: string
               description: 'the report title '
-    updateReport:
-      allOf:
-      - $ref: '#/components/schemas/ReportBaseRequest'
     Unauthorized:
       type: object
       properties:

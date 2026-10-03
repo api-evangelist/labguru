@@ -137,6 +137,9 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    updateStorage:
+      allOf:
+      - $ref: '#/components/schemas/StorageBaseRequest'
     createStorage:
       allOf:
       - $ref: '#/components/schemas/StorageBaseRequest'
@@ -147,9 +150,6 @@ components:
             required:
             - name
             - storage_type_id
-    updateStorage:
-      allOf:
-      - $ref: '#/components/schemas/StorageBaseRequest'
     StorageBaseRequest:
       type: object
       required:

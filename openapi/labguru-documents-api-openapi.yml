@@ -131,6 +131,9 @@ components:
             description:
               type: string
               description: the document description
+    updateDocument:
+      allOf:
+      - $ref: '#/components/schemas/DocumentBaseRequest'
     createDocument:
       allOf:
       - $ref: '#/components/schemas/DocumentBaseRequest'
@@ -140,6 +143,3 @@ components:
             type: object
             required:
             - title
-    updateDocument:
-      allOf:
-      - $ref: '#/components/schemas/DocumentBaseRequest'

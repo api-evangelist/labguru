@@ -547,40 +547,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    acceptRequest:
-      type: object
-      required:
-      - token
-      properties:
-        token:
-          type: string
-          example: YOUR TOKEN IS HERE
-        item:
-          type: object
-          properties:
-            priority:
-              type: string
-              description: Specifies the priority level of the request. By default - Low
-              enum:
-              - Low
-              - Medium
-              - High
-              - Urgent
-              example: Medium
-    startRequest:
-      type: object
-      required:
-      - token
-      properties:
-        token:
-          type: string
-          example: YOUR TOKEN IS HERE
-        item:
-          type: object
-          properties:
-            performed_by:
-              type: integer
-              description: The ID of the member which will perform the request
     createRequest:
       type: object
       required:
@@ -609,6 +575,56 @@ components:
               - High
               - Urgent
               example: Medium
+    approvedRequest:
+      type: object
+      required:
+      - token
+      properties:
+        token:
+          type: string
+          example: YOUR TOKEN IS HERE
+        item:
+          type: object
+          properties:
+            team_id:
+              type: integer
+              description: The performing team ID
+            due_date:
+              type: string
+              format: date
+              description: Date in the following format - 'YYYY-MM-DD'
+              example: '2024-03-11'
+            priority:
+              type: string
+              description: Specifies the priority level of the request. By default - Low
+              enum:
+              - Low
+              - Medium
+              - High
+              - Urgent
+              example: Medium
+    submitRequest:
+      type: object
+      required:
+      - token
+      properties:
+        token:
+          type: string
+          example: YOUR TOKEN IS HERE
+        item:
+          type: object
+          properties:
+            name:
+              type: string
+              description: The name of the request
+            team_id:
+              type: integer
+              description: The performing team ID
+            due_date:
+              type: string
+              format: date
+              description: Date in the following format - 'YYYY-MM-DD'
+              example: '2024-03-11'
     updateRequest:
       type: object
       required:
@@ -652,6 +668,26 @@ components:
               format: date
               description: Date in the following format - 'YYYY-MM-DD'
               example: '2024-03-11'
+    acceptRequest:
+      type: object
+      required:
+      - token
+      properties:
+        token:
+          type: string
+          example: YOUR TOKEN IS HERE
+        item:
+          type: object
+          properties:
+            priority:
+              type: string
+              description: Specifies the priority level of the request. By default - Low
+              enum:
+              - Low
+              - Medium
+              - High
+              - Urgent
+              example: Medium
     selectPerformer:
       type: object
       required:
@@ -668,7 +704,7 @@ components:
             performed_by:
               type: integer
               description: The ID of the member which will perform the request
-    submitRequest:
+    startRequest:
       type: object
       required:
       - token
@@ -679,42 +715,6 @@ components:
         item:
           type: object
           properties:
-            name:
-              type: string
-              description: The name of the request
-            team_id:
+            performed_by:
               type: integer
-              description: The performing team ID
-            due_date:
-              type: string
-              format: date
-              description: Date in the following format - 'YYYY-MM-DD'
-              example: '2024-03-11'
-    approvedRequest:
-      type: object
-      required:
-      - token
-      properties:
-        token:
-          type: string
-          example: YOUR TOKEN IS HERE
-        item:
-          type: object
-          properties:
-            team_id:
-              type: integer
-              description: The performing team ID
-            due_date:
-              type: string
-              format: date
-              description: Date in the following format - 'YYYY-MM-DD'
-              example: '2024-03-11'
-            priority:
-              type: string
-              description: Specifies the priority level of the request. By default - Low
-              enum:
-              - Low
-              - Medium
-              - High
-              - Urgent
-              example: Medium
+              description: The ID of the member which will perform the request

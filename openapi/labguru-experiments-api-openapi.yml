@@ -423,17 +423,9 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    addExperiment:
+    updateExperiment:
       allOf:
       - $ref: '#/components/schemas/ExperimentBaseRequest'
-      - type: object
-        properties:
-          item:
-            type: object
-            required:
-            - title
-            - project_id
-            - milestone_id
     ExperimentBaseRequest:
       type: object
       required:
@@ -457,9 +449,42 @@ components:
             protocol_id:
               type: integer
               description: 'Start experiment from protocol by providing the protocol id '
-    updateExperiment:
+    addExperiment:
       allOf:
       - $ref: '#/components/schemas/ExperimentBaseRequest'
+      - type: object
+        properties:
+          item:
+            type: object
+            required:
+            - title
+            - project_id
+            - milestone_id
+    Unauthorized:
+      type: object
+      properties:
+        message:
+          type: string
+          example: You are not authorized to perform this action
+    NotFound:
+      type: object
+      properties:
+        error:
+          type: string
+          example: Resource not found
+    CreateExperimentNewFolder:
+      allOf:
+      - $ref: '#/components/schemas/createExperimentBaseRequest'
+      - type: object
+        properties:
+          item:
+            type: object
+            properties:
+              milestone_name:
+                type: string
+                description: "The name of a new milestone (folder) to be created for the experiment.\n                        Required if milestone_id is not provided."
+            required:
+            - milestone_name
     CreateExperimentExistingFolder:
       allOf:
       - $ref: '#/components/schemas/createExperimentBaseRequest'
@@ -473,12 +498,6 @@ components:
                 description: "The ID of the existing milestone (folder) that will contain the experiment.\n                            Required if milestone name is not provided."
             required:
             - milestone_id
-    Unauthorized:
-      type: object
-      properties:
-        message:
-          type: string
-          example: You are not authorized to perform this action
     createExperimentBaseRequest:
       type: object
       required:
@@ -546,25 +565,6 @@ components:
                           example: This is a sample text data
                 required:
                 - title
-    CreateExperimentNewFolder:
-      allOf:
-      - $ref: '#/components/schemas/createExperimentBaseRequest'
-      - type: object
-        properties:
-          item:
-            type: object
-            properties:
-              milestone_name:
-                type: string
-                description: "The name of a new milestone (folder) to be created for the experiment.\n                        Required if milestone_id is not provided."
-            required:
-            - milestone_name
-    NotFound:
-      type: object
-      properties:
-        error:
-          type: string
-          example: Resource not found
 x-refined-from:
 - labguru-rest-api-v1.yaml
 - labguru-rest-api-v2.yaml

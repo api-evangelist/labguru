@@ -114,6 +114,15 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    createBox:
+      allOf:
+      - $ref: '#/components/schemas/BoxBaseRequest'
+      - type: object
+        properties:
+          item:
+            type: object
+            required:
+            - name
     BoxBaseRequest:
       type: object
       required:
@@ -150,12 +159,3 @@ components:
     updateBox:
       allOf:
       - $ref: '#/components/schemas/BoxBaseRequest'
-    createBox:
-      allOf:
-      - $ref: '#/components/schemas/BoxBaseRequest'
-      - type: object
-        properties:
-          item:
-            type: object
-            required:
-            - name

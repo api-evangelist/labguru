@@ -123,6 +123,9 @@ components:
             type: object
             required:
             - name
+    updateMaterial:
+      allOf:
+      - $ref: '#/components/schemas/MaterialBaseRequest'
     MaterialBaseRequest:
       type: object
       required:
@@ -168,6 +171,3 @@ components:
             currency:
               type: integer
               description: '0 = NIS, 1 = DOLLAR, 2 = EURO, 3 = POUND, 4 = NOK '
-    updateMaterial:
-      allOf:
-      - $ref: '#/components/schemas/MaterialBaseRequest'

@@ -150,9 +150,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    updateEquipment:
-      allOf:
-      - $ref: '#/components/schemas/EquipmentBaseRequest'
     EquipmentBaseRequest:
       type: object
       required:
@@ -202,6 +199,9 @@ components:
             type: object
             required:
             - name
+    updateEquipment:
+      allOf:
+      - $ref: '#/components/schemas/EquipmentBaseRequest'
 x-refined-from:
 - labguru-rest-api-v1.yaml
 - labguru-rest-api-v2.yaml

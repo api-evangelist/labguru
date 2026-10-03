@@ -131,9 +131,6 @@ components:
             type: object
             required:
             - name
-    updateLipid:
-      allOf:
-      - $ref: '#/components/schemas/LipidBaseRequest'
     LipidBaseRequest:
       type: object
       required:
@@ -187,3 +184,6 @@ components:
             description:
               type: string
               description: Detailed description of the lipid
+    updateLipid:
+      allOf:
+      - $ref: '#/components/schemas/LipidBaseRequest'
