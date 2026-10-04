@@ -1306,7 +1306,7 @@ apis:
   humanURL: https://www.labguru.com/developer-tools
   baseURL: https://my.labguru.com/api/v1
   tags:
-  - Seed
+  - Seeds
   tags_raw:
   - Seeds
   properties:
