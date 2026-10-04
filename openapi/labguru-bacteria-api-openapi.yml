@@ -147,9 +147,6 @@ components:
             description:
               type: string
               description: A detailed description of the bacterium
-    updateBacterium:
-      allOf:
-      - $ref: '#/components/schemas/BacteriumBaseRequest'
     createBacterium:
       allOf:
       - $ref: '#/components/schemas/BacteriumBaseRequest'
@@ -159,3 +156,6 @@ components:
             type: object
             required:
             - name
+    updateBacterium:
+      allOf:
+      - $ref: '#/components/schemas/BacteriumBaseRequest'

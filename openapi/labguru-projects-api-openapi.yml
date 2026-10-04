@@ -114,18 +114,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    createProject:
-      allOf:
-      - $ref: '#/components/schemas/ProjectBaseRequest'
-      - type: object
-        properties:
-          item:
-            type: object
-            required:
-            - title
-    updateProject:
-      allOf:
-      - $ref: '#/components/schemas/ProjectBaseRequest'
     ProjectBaseRequest:
       type: object
       required:
@@ -156,3 +144,15 @@ components:
             owner_id:
               type: integer
               description: 'ID of the owner (default: your member id)'
+    createProject:
+      allOf:
+      - $ref: '#/components/schemas/ProjectBaseRequest'
+      - type: object
+        properties:
+          item:
+            type: object
+            required:
+            - title
+    updateProject:
+      allOf:
+      - $ref: '#/components/schemas/ProjectBaseRequest'

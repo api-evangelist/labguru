@@ -114,17 +114,9 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    createMaintenanceTemplate:
+    updateMaintenanceTemplate:
       allOf:
       - $ref: '#/components/schemas/MaintenanceTemplateBaseRequest'
-      - type: object
-        properties:
-          item:
-            type: object
-            required:
-            - equipment_type
-            - maintenance_type_id
-            - data
     MaintenanceTemplateBaseRequest:
       type: object
       required:
@@ -146,6 +138,14 @@ components:
               type: string
               description: templates fields in the follwing json format
               example: '[{"title":"Detergent","value":"Wateriii:"}]'
-    updateMaintenanceTemplate:
+    createMaintenanceTemplate:
       allOf:
       - $ref: '#/components/schemas/MaintenanceTemplateBaseRequest'
+      - type: object
+        properties:
+          item:
+            type: object
+            required:
+            - equipment_type
+            - maintenance_type_id
+            - data

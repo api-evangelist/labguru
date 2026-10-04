@@ -121,15 +121,6 @@ components:
     updateTissue:
       allOf:
       - $ref: '#/components/schemas/TissueBaseRequest'
-    createTissue:
-      allOf:
-      - $ref: '#/components/schemas/TissueBaseRequest'
-      - type: object
-        properties:
-          item:
-            type: object
-            required:
-            - name
     TissueBaseRequest:
       type: object
       required:
@@ -181,3 +172,12 @@ components:
             description:
               type: string
               description: Description of the tissue
+    createTissue:
+      allOf:
+      - $ref: '#/components/schemas/TissueBaseRequest'
+      - type: object
+        properties:
+          item:
+            type: object
+            required:
+            - name

@@ -118,9 +118,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    updateSequence:
-      allOf:
-      - $ref: '#/components/schemas/SequenceBaseRequest'
     createSequence:
       allOf:
       - $ref: '#/components/schemas/SequenceBaseRequest'
@@ -131,6 +128,9 @@ components:
             required:
             - title
             - seq
+    updateSequence:
+      allOf:
+      - $ref: '#/components/schemas/SequenceBaseRequest'
     SequenceBaseRequest:
       type: object
       required:

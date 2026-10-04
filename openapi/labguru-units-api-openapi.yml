@@ -114,19 +114,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    deleteUnit:
-      type: object
-      required:
-      - token
-      - unit_type
-      properties:
-        token:
-          type: string
-          example: YOUR TOKEN IS HERE
-        unit_type:
-          type: string
-          description: weight/volume/concentration
-          example: weight
     createUnit:
       type: object
       required:
@@ -147,3 +134,16 @@ components:
             type_for:
               type: string
               description: weight/volume/concentration
+    deleteUnit:
+      type: object
+      required:
+      - token
+      - unit_type
+      properties:
+        token:
+          type: string
+          example: YOUR TOKEN IS HERE
+        unit_type:
+          type: string
+          description: weight/volume/concentration
+          example: weight

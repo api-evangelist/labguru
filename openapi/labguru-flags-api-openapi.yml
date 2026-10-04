@@ -201,6 +201,18 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    createFlag:
+      allOf:
+      - $ref: '#/components/schemas/FlagBaseRequest'
+      - type: object
+        properties:
+          item:
+            type: object
+            required:
+            - title
+    updateFlag:
+      allOf:
+      - $ref: '#/components/schemas/FlagBaseRequest'
     FlagBaseRequest:
       type: object
       required:
@@ -253,15 +265,3 @@ components:
             description:
               type: string
               description: General description of the flag
-    updateFlag:
-      allOf:
-      - $ref: '#/components/schemas/FlagBaseRequest'
-    createFlag:
-      allOf:
-      - $ref: '#/components/schemas/FlagBaseRequest'
-      - type: object
-        properties:
-          item:
-            type: object
-            required:
-            - title

@@ -547,7 +547,7 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    createRequest:
+    startRequest:
       type: object
       required:
       - token
@@ -557,15 +557,21 @@ components:
           example: YOUR TOKEN IS HERE
         item:
           type: object
-          required:
-          - request_template_id
           properties:
-            name:
-              type: string
-              description: The name of the request
-            request_template_id:
+            performed_by:
               type: integer
-              description: The ID of the request template to start the request from
+              description: The ID of the member which will perform the request
+    acceptRequest:
+      type: object
+      required:
+      - token
+      properties:
+        token:
+          type: string
+          example: YOUR TOKEN IS HERE
+        item:
+          type: object
+          properties:
             priority:
               type: string
               description: Specifies the priority level of the request. By default - Low
@@ -603,28 +609,6 @@ components:
               - High
               - Urgent
               example: Medium
-    submitRequest:
-      type: object
-      required:
-      - token
-      properties:
-        token:
-          type: string
-          example: YOUR TOKEN IS HERE
-        item:
-          type: object
-          properties:
-            name:
-              type: string
-              description: The name of the request
-            team_id:
-              type: integer
-              description: The performing team ID
-            due_date:
-              type: string
-              format: date
-              description: Date in the following format - 'YYYY-MM-DD'
-              example: '2024-03-11'
     updateRequest:
       type: object
       required:
@@ -668,7 +652,7 @@ components:
               format: date
               description: Date in the following format - 'YYYY-MM-DD'
               example: '2024-03-11'
-    acceptRequest:
+    createRequest:
       type: object
       required:
       - token
@@ -678,7 +662,15 @@ components:
           example: YOUR TOKEN IS HERE
         item:
           type: object
+          required:
+          - request_template_id
           properties:
+            name:
+              type: string
+              description: The name of the request
+            request_template_id:
+              type: integer
+              description: The ID of the request template to start the request from
             priority:
               type: string
               description: Specifies the priority level of the request. By default - Low
@@ -704,7 +696,7 @@ components:
             performed_by:
               type: integer
               description: The ID of the member which will perform the request
-    startRequest:
+    submitRequest:
       type: object
       required:
       - token
@@ -715,6 +707,14 @@ components:
         item:
           type: object
           properties:
-            performed_by:
+            name:
+              type: string
+              description: The name of the request
+            team_id:
               type: integer
-              description: The ID of the member which will perform the request
+              description: The performing team ID
+            due_date:
+              type: string
+              format: date
+              description: Date in the following format - 'YYYY-MM-DD'
+              example: '2024-03-11'

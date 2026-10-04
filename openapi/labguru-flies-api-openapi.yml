@@ -156,9 +156,6 @@ components:
             description:
               type: string
               description: Description of the fly
-    updateFly:
-      allOf:
-      - $ref: '#/components/schemas/FlyBaseRequest'
     createFly:
       allOf:
       - $ref: '#/components/schemas/FlyBaseRequest'
@@ -168,3 +165,6 @@ components:
             type: object
             required:
             - name
+    updateFly:
+      allOf:
+      - $ref: '#/components/schemas/FlyBaseRequest'

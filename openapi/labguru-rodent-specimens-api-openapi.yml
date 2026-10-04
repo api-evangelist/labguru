@@ -117,16 +117,6 @@ components:
     updateRodentSpecimen:
       allOf:
       - $ref: '#/components/schemas/RodentSpecimenBaseRequest'
-    createRodentSpecimen:
-      allOf:
-      - $ref: '#/components/schemas/RodentSpecimenBaseRequest'
-      - type: object
-        properties:
-          item:
-            type: object
-            required:
-            - name
-            - status
     RodentSpecimenBaseRequest:
       type: object
       required:
@@ -182,3 +172,13 @@ components:
             source:
               type: string
               description: source
+    createRodentSpecimen:
+      allOf:
+      - $ref: '#/components/schemas/RodentSpecimenBaseRequest'
+      - type: object
+        properties:
+          item:
+            type: object
+            required:
+            - name
+            - status

@@ -114,6 +114,15 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    createCompound:
+      allOf:
+      - $ref: '#/components/schemas/CompoundBaseRequest'
+      - type: object
+        properties:
+          item:
+            type: object
+            required:
+            - name
     CompoundBaseRequest:
       type: object
       required:
@@ -159,15 +168,6 @@ components:
             hazards:
               type: string
               description: Compound hazards
-    createCompound:
-      allOf:
-      - $ref: '#/components/schemas/CompoundBaseRequest'
-      - type: object
-        properties:
-          item:
-            type: object
-            required:
-            - name
     updateCompound:
       allOf:
       - $ref: '#/components/schemas/CompoundBaseRequest'

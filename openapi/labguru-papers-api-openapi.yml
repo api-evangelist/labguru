@@ -110,6 +110,9 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    updatePaper:
+      allOf:
+      - $ref: '#/components/schemas/PaperBaseRequest'
     createPaper:
       allOf:
       - $ref: '#/components/schemas/PaperBaseRequest'
@@ -119,9 +122,6 @@ components:
             type: object
             required:
             - name
-    updatePaper:
-      allOf:
-      - $ref: '#/components/schemas/PaperBaseRequest'
     PaperBaseRequest:
       type: object
       required:

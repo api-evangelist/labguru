@@ -127,9 +127,6 @@ components:
             type: object
             required:
             - name
-    updateVirus:
-      allOf:
-      - $ref: '#/components/schemas/VirusBaseRequest'
     VirusBaseRequest:
       type: object
       required:
@@ -195,3 +192,6 @@ components:
             description:
               type: string
               description: Description of the virus
+    updateVirus:
+      allOf:
+      - $ref: '#/components/schemas/VirusBaseRequest'

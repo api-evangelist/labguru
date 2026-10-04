@@ -122,9 +122,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    updatePrimer:
-      allOf:
-      - $ref: '#/components/schemas/PrimerBaseRequest'
     createPrimer:
       allOf:
       - $ref: '#/components/schemas/PrimerBaseRequest'
@@ -196,3 +193,6 @@ components:
             description:
               type: string
               description: A detailed description of the primer
+    updatePrimer:
+      allOf:
+      - $ref: '#/components/schemas/PrimerBaseRequest'
